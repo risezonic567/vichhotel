@@ -16,7 +16,7 @@ const Weddings = () => {
   return (
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
 
-      <section className="relative  min-h-[65vh] md:mt-16 overflow-hidden">
+      {/* <section className="relative  min-h-[65vh] md:mt-16 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop"
           alt="Luxury destination wedding"
@@ -44,23 +44,53 @@ const Weddings = () => {
             </p>
           </div>
         </div>
+      </section> */}
+
+        <section className="relative md:mt-20 min-h-[65vh] flex items-center justify-center overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop"
+          alt="Vicoh Hotels"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="relative z-10 text-center text-white max-w-4xl px-6">
+
+          <p className="text-[#D4AF37] uppercase tracking-[0.35em] text-xs mb-5">
+            Our Properties
+          </p>
+
+          <h1 className="font-serif text-5xl md:text-7xl font-light mb-6">
+            A Collection of Exceptional Stays
+          </h1>
+
+          <p className="text-white/80 max-w-2xl mx-auto leading-7 text-sm md:text-base">
+            Discover distinctive Vicoh properties across India's most
+            inspiring destinations, where refined hospitality meets
+            unforgettable experiences.
+          </p>
+
+        </div>
       </section>
 
       <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <span className="text-[#D4AF37] text-xs uppercase tracking-[0.25em] font-semibold">
-            Your Day, Your Way
+            Destination Weddings
           </span>
 
           <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-6">
-            Weddings Made Remarkable
+            Celebrate Your Story
+            
+              Somewhere Extraordinary.
           </h2>
 
           <p className="text-sm md:text-base text-[#666] leading-8">
-            Every wedding deserves a setting as special as the story behind
-            it. At Vicoh Hotel, our dedicated team brings together elegant
-            venues, exceptional dining, thoughtful details and personalized
-            service to create celebrations that feel uniquely yours.
+            From intimate celebrations to grand destination weddings,
+              Vicoh Hotel creates unforgettable moments surrounded by
+              exceptional hospitality and beautiful settings.
           </p>
         </div>
       </section>

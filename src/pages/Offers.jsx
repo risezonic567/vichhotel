@@ -58,8 +58,8 @@ const Offers = () => {
   return (
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
 
-      {/* Hero */}
-      <section className="relative h-[65vh] min-h-[500px] md:mt-20 overflow-hidden">
+     
+      {/* <section className="relative h-[65vh] min-h-[500px] md:mt-20 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=2000&auto=format&fit=crop"
           alt="Luxury hotel room"
@@ -85,6 +85,36 @@ const Offers = () => {
               exclusive benefits created to make every Vicoh stay more special.
             </p>
           </div>
+        </div>
+      </section> */}
+
+       <section className="relative md:mt-20 min-h-[65vh] flex items-center justify-center overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=2000&auto=format&fit=crop"
+          alt="Vicoh Hotels"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="relative z-10 text-center text-white max-w-4xl px-6">
+
+          <p className="text-[#D4AF37] uppercase tracking-[0.35em] text-xs mb-5">
+            Exclusive Offers
+          </p>
+
+          <h1 className="font-serif text-5xl md:text-7xl font-light mb-6">
+            More Reasons
+       
+              to Stay With Us.
+          </h1>
+
+          <p className="text-white/80 max-w-2xl mx-auto leading-7 text-sm md:text-base">
+           Discover thoughtfully curated stays, seasonal experiences and
+              exclusive benefits created to make every Vicoh stay more special.
+          </p>
+
         </div>
       </section>
 

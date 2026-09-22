@@ -77,7 +77,7 @@ export default function Hotel() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
 
-          {ourHotelsData.map((hotel) => (
+          {ourHotelsData.slice(1,4).map((hotel) => (
 
             <div
               key={hotel.id}

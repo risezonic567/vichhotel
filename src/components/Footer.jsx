@@ -1,23 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <footer className="bg-[#1C1C1C] text-[#FAF9F6] border-t border-[#D4AF37]/20 pt-16 pb-12">
+    <footer className="bg-[#1C1C1C]/90 text-[#FAF9F6] border-t border-[#D4AF37]/20 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-        
-        {/* BRAND */}
+
         <div>
-          <Link to="/" className="block mb-4 focus:outline-none focus:ring-1 focus:ring-[#D4AF37]">
-            <span className="font-serif text-2xl tracking-[0.2em] text-[#FAF9F6] font-light uppercase">
-              Vicoh
-            </span>
-            <span className="block text-[10px] tracking-[0.35em] text-[#D4AF37] uppercase font-sans font-medium">
-              Hotel
-            </span>
+          <Link
+            to="/"
+            aria-label="Vicoh Hotel Home"
+            className=" focus:outline-none focus:ring-1 focus:ring-[#D4AF37] rounded z-10 transition-transform duration-300 hover:scale-105"
+          >
+            <img
+              src="/images/logo/viccccccooohhhhh.jpg__1_-removebg-preview (1).png"
+              alt="Vicoh Hotel Logo"
+
+              className="w-auto object-contain transition-all duration-300 h-40"
+            />  
           </Link>
 
           <p className="text-sm text-[#FAF9F6]/60 leading-relaxed">

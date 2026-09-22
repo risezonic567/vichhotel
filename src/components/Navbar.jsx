@@ -21,10 +21,17 @@ const Navbar = () => {
     };
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { name: "About Us", path: "/about-us" },
@@ -37,40 +44,48 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled
-          ? "py-3 md:py-4 border-b border-[#D4AF37]/20 shadow-lg"
-          : "py-4 md:py-6"
+          ? "py-2.5 border-b border-[#D4AF37]/20 shadow-md"
+          : "py-4 md:py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
-        <div className="flex items-center justify-between">
-          
-          {/* LOGO */}
-          <Link
-            to="/"
-            className="flex flex-col leading-none"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <span className="font-serif text-lg sm:text-xl md:text-2xl tracking-[0.15em] sm:tracking-[0.2em] font-light uppercase text-[#D4AF37]">
-              Vicoh
-            </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12">
+        <div className="flex items-center justify-between h-12 md:h-14">
 
-            <span className="text-[7px] sm:text-[8px] md:text-[9px] tracking-[0.3em] sm:tracking-[0.35em] text-[#D4AF37] uppercase font-sans font-medium mt-1">
-              Hotel
-            </span>
-          </Link>
+      
+          <div className="relative flex items-center shrink-0">
+            <Link
+              to="/"
+              aria-label="Vicoh Hotel Home"
+              className="absolute top-1/2 -translate-y-1/2 left-0 focus:outline-none focus:ring-1 focus:ring-[#D4AF37] rounded z-10 transition-transform duration-300 hover:scale-105"
+            >
+              <img
+                src="/images/logo/viccccccooohhhhh.jpg__1_-removebg-preview (1).png"
+                alt="Vicoh Hotel Logo"
+               
+                className={`w-auto object-contain transition-all duration-300 ${
+                  isScrolled 
+                    ? "h-20 md:h-32"  /* Scroll karne par thoda chhota */
+                    : "h-20 md:h-32"  /* Normal state me BADA logo */
+                }`}
+              />
+            </Link>
+            <div className={`transition-all duration-300 ${isScrolled ? "w-28 md:w-36" : "w-32 md:w-44"}`} />
+          </div>
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center space-x-7 lg:space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                location.pathname === link.path ||
+                (link.path !== "/" &&
+                  location.pathname.startsWith(`${link.path}/`));
 
               return (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-xs uppercase tracking-[0.18em] transition-colors duration-300 relative py-2 ${
+                  className={`text-[12px] lg:text-xs font-semibold uppercase tracking-[0.16em] lg:tracking-[0.18em] transition-colors duration-300 relative py-2 whitespace-nowrap ${
                     isActive
                       ? "text-[#D4AF37]"
                       : "text-[#1C1C1C] hover:text-[#D4AF37]"
@@ -94,13 +109,12 @@ const Navbar = () => {
             })}
           </nav>
 
-          {/* MOBILE MENU BUTTON */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className="md:hidden flex items-center justify-center w-10 h-10 text-[#1C1C1C] focus:outline-none"
+            className="md:hidden flex items-center justify-center w-10 h-10 text-[#1C1C1C] rounded focus:outline-none focus:ring-1 focus:ring-[#D4AF37]"
           >
             <AnimatePresence mode="wait" initial={false}>
               {mobileMenuOpen ? (
@@ -109,6 +123,7 @@ const Navbar = () => {
                   initial={{ rotate: -90, opacity: 0 }}
                   animate={{ rotate: 0, opacity: 1 }}
                   exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <X className="w-6 h-6 text-[#D4AF37]" />
                 </motion.div>
@@ -118,6 +133,7 @@ const Navbar = () => {
                   initial={{ rotate: 90, opacity: 0 }}
                   animate={{ rotate: 0, opacity: 1 }}
                   exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <Menu className="w-6 h-6" />
                 </motion.div>
@@ -127,20 +143,25 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
             className="md:hidden bg-[#1C1C1C] border-t border-[#D4AF37]/20 overflow-hidden"
           >
-            <div className="px-6 py-7">
+            <div className="px-5 sm:px-6 py-5 sm:py-7">
               <nav className="flex flex-col">
                 {navLinks.map((link, index) => {
-                  const isActive = location.pathname === link.path;
+                  const isActive =
+                    location.pathname === link.path ||
+                    (link.path !== "/" &&
+                      location.pathname.startsWith(`${link.path}/`));
 
                   return (
                     <motion.div
@@ -155,7 +176,7 @@ const Navbar = () => {
                       <Link
                         to={link.path}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`flex items-center justify-between py-4 border-b border-white/10 text-sm uppercase tracking-[0.2em] transition-colors duration-300 ${
+                        className={`flex items-center justify-between py-4 border-b border-white/10 text-xs sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] transition-colors duration-300 ${
                           isActive
                             ? "text-[#D4AF37]"
                             : "text-white/85 hover:text-[#D4AF37]"
@@ -172,9 +193,8 @@ const Navbar = () => {
                 })}
               </nav>
 
-              {/* Bottom branding */}
               <div className="pt-6 text-center">
-                <span className="text-[8px] tracking-[0.35em] uppercase text-[#D4AF37]/70">
+                <span className="text-[8px] tracking-[0.3em] uppercase text-[#D4AF37]/70">
                   Vibe Collective Hospitality
                 </span>
               </div>
