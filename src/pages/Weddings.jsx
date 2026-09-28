@@ -16,35 +16,7 @@ const Weddings = () => {
   return (
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
 
-      {/* <section className="relative  min-h-[65vh] md:mt-16 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop"
-          alt="Luxury destination wedding"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        <div className="absolute inset-0 bg-black/45" />
-
-        <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex items-end pb-20">
-          <div className="max-w-3xl text-white">
-            <span className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] font-semibold">
-              Destination Weddings
-            </span>
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif leading-tight mt-4">
-              Celebrate Your Story
-              <br />
-              Somewhere Extraordinary.
-            </h1>
-
-            <p className="mt-6 max-w-xl text-sm md:text-base text-white/85 leading-relaxed">
-              From intimate celebrations to grand destination weddings,
-              Vicoh Hotel creates unforgettable moments surrounded by
-              exceptional hospitality and beautiful settings.
-            </p>
-          </div>
-        </div>
-      </section> */}
+     
 
         <section className="relative md:mt-20 min-h-[65vh] flex items-center justify-center overflow-hidden">
 

@@ -104,7 +104,7 @@ export default function FeaturedHotel({ hotel }) {
               </span>
 
               <span className="text-[#D5D5D5]">
-                |
+                
               </span>
 
               <span className="text-xs text-[#777]">
@@ -171,7 +171,6 @@ export default function FeaturedHotel({ hotel }) {
 
             </div>
 
-            {/* Price + CTA */}
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
 
               <div>

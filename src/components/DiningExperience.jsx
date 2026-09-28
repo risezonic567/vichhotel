@@ -41,13 +41,13 @@ export default function DiningExperience() {
                     title="A Culinary Journey Worth Savoring."
                 />
 
-                <div className="max-w-2xl mt-8 mb-14">
+                {/* <div className="max-w-2xl mt-8 mb-14">
                     <p className="text-sm md:text-base leading-relaxed text-black">
                         From authentic regional flavours to refined contemporary cuisine,
                         every dining experience at VICHO is designed to celebrate taste,
                         tradition and togetherness.
                     </p>
-                </div>
+                </div> */}
 
                 {/* Dining Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

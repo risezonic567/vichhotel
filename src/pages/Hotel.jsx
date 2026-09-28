@@ -45,8 +45,6 @@ export default function Hotel() {
         </div>
       </section>
 
-
-      {/* ================= INTRO ================= */}
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
 
@@ -77,14 +75,13 @@ export default function Hotel() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
 
-          {ourHotelsData.slice(1,4).map((hotel) => (
+          {ourHotelsData.slice(1, 4).map((hotel) => (
 
             <div
               key={hotel.id}
               className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
             >
 
-              {/* IMAGE */}
               <div className="h-72 overflow-hidden relative">
 
                 <img
@@ -93,7 +90,6 @@ export default function Hotel() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
-                {/* CATEGORY */}
                 <div className="absolute top-4 left-4">
 
                   <span className="bg-white/95 px-3 py-2 text-[10px] uppercase tracking-widest text-[#1C1C1C]">
@@ -105,7 +101,6 @@ export default function Hotel() {
               </div>
 
 
-              {/* CONTENT */}
               <div className="p-6">
 
                 {/* LOCATION */}
@@ -125,14 +120,10 @@ export default function Hotel() {
                   {hotel.name}
                 </h3>
 
-
-                {/* DESCRIPTION */}
                 <p className="text-xs text-[#555] leading-relaxed mb-6 line-clamp-2">
                   {hotel.shortDescription}
                 </p>
 
-
-                {/* QUICK INFO */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
 
                   <div className="border border-[#E5DCC3] p-3">
@@ -245,8 +236,6 @@ export default function Hotel() {
 
       </section>
 
-
-      {/* ================= WHY VICOH ================= */}
       <section className="py-20 px-6 md:px-12 bg-white">
 
         <div className="max-w-7xl mx-auto">
@@ -259,7 +248,6 @@ export default function Hotel() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
 
-            {/* CARD 1 */}
             <div className="text-center border border-[#E5DCC3] p-8">
 
               <BedDouble className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />
@@ -315,8 +303,6 @@ export default function Hotel() {
 
       </section>
 
-
-      {/* ================= EVENTS CTA ================= */}
       <section className="py-24 px-6 md:px-12 bg-[#FAF9F6] text-black">
 
         <div className="max-w-5xl mx-auto text-center">
@@ -358,8 +344,6 @@ export default function Hotel() {
 
       </section>
 
-
-      {/* ================= FINAL CTA ================= */}
       <section className="py-20 px-6 md:px-12 bg-white">
 
         <div className="max-w-4xl mx-auto text-center">

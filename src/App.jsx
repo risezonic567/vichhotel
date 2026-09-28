@@ -7,10 +7,6 @@ import ScrollToTop from './components/ScrollToTop';
 
 import Home from './pages/Home';
 import About from './pages/About';
-// import HolidayPackages from './pages/HolidayPackages';
-// import PackageDetails from './pages/PackageDetails';
-// import Events from './pages/Events';
-// import EventDetails from './pages/EventDetails';
 import Weddings from './pages/Weddings';
 import WeddingDetails from './pages/WeddingDetails';
 import Contact from './pages/Contact';

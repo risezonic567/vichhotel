@@ -68,8 +68,83 @@ currency: "₹",
   email: "reservations@vicohhotel.com",
 },
 
- {
+{
   id: 2,
+  slug: "sparklyn-view-manali",
+  name: "Sparklyn View, Manali",
+  location: "Manali, Himachal Pradesh",
+
+ 
+  heroImage: "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/room6.jpg",
+
+  rating: 4.8,
+  reviews: 324,
+  price: 8500,
+  currency: "₹",
+
+  category: "Mountain Retreat",
+
+  shortDescription:
+    "A tranquil mountain retreat in Manali featuring centrally heated rooms, personal balconies, and stunning scenic views.",
+
+  description:
+    "Set against the dramatic landscape of Manali, VICOH Sparklyn View offers a peaceful escape with 17 well-appointed rooms, including 9 centrally heated rooms and personal balcony spaces for breathtaking views.",
+
+  rooms: "17 Keys / Rooms",
+
+  checkIn: "2:00 PM",
+  checkOut: "12:00 PM",
+
+  gallery: [
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/buildingview1.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/entrance2.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/receptions3.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580910/lobby4.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580897/gallery5.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/room6.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580920/room7.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580923/room8.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580919/room9.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/balcony10.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580911/kitchen11.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580899/diningarea12.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580899/diningarea13.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580908/img14.jpg",
+    "https://res.cloudinary.com/vax63czu/image/upload/v1790580910/img16.jpg",
+  ],
+
+  amenities: [
+    "17 Keys / Rooms",
+    "9 Centrally Heated Rooms",
+    "Personal Balcony Rooms",
+    "Mountain View Rooms",
+    "Luxury Suites",
+    "Spa & Wellness",
+    "Mountain Restaurant",
+    "Bonfire Area",
+  ],
+
+  dining: [
+    "Mountain View Restaurant",
+    "Himalayan Cuisine",
+    "Private Dining",
+    "Bonfire Dining",
+  ],
+
+  experiences: [
+    "Panoramic Himalayan views from personal balcony",
+    "Centrally heated room comfort",
+    "Peaceful mountain setting",
+    "Curated local experiences",
+  ],
+
+  phone: "+91 1902 456 700",
+  email: "reservations@vicohhotel.com",
+},
+
+
+ {
+  id: 3,
   slug: "vicoh-palace-goa",
   name: "Vicoh Palace Goa",
   location: "North Goa, India",
@@ -134,71 +209,72 @@ currency: "₹",
   email: "reservations@vicohhotel.com",
 },
 
-{
-  id: 3,
-  slug: "vicoh-hills-manali",
-  name: "Vicoh Hills Manali",
-  location: "Manali, Himachal Pradesh",
+// {
+//   id: 3,
+//   slug: "vicoh-hills-manali",
+//   name: "Vicoh Hills Manali",
+//   location: "Manali, Himachal Pradesh",
 
-  heroImage:
-    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
+//   heroImage:
+//     "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
 
-    rating: 4.8,
-reviews: 324,
-price: 8500,
-currency: "₹",
+//     rating: 4.8,
+// reviews: 324,
+// price: 8500,
+// currency: "₹",
 
-  category: "Mountain Retreat",
+//   category: "Mountain Retreat",
 
-  shortDescription:
-    "A tranquil mountain retreat offering breathtaking views, elegant interiors, and immersive Himalayan experiences.",
+//   shortDescription:
+//     "A tranquil mountain retreat offering breathtaking views, elegant interiors, and immersive Himalayan experiences.",
 
-  description:
-    "Set against the dramatic landscape of the Himalayas, Vicoh Hills Manali offers a peaceful escape surrounded by nature. Guests can enjoy thoughtfully designed accommodations, locally inspired cuisine, wellness experiences, and curated mountain adventures.",
+//   description:
+//     "Set against the dramatic landscape of the Himalayas, Vicoh Hills Manali offers a peaceful escape surrounded by nature. Guests can enjoy thoughtfully designed accommodations, locally inspired cuisine, wellness experiences, and curated mountain adventures.",
 
-  rooms: "86 Rooms & Suites",
+//   rooms: "86 Rooms & Suites",
 
-  checkIn: "2:00 PM",
+//   checkIn: "2:00 PM",
 
-  checkOut: "12:00 PM",
+//   checkOut: "12:00 PM",
 
-  gallery: [
-    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
+//   gallery: [
+//     "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
 
-    "https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=1600&auto=format&fit=crop",
+//     "https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=1600&auto=format&fit=crop",
 
-    "https://images.unsplash.com/photo-1486911278844-a81c5267e227?q=80&w=1600&auto=format&fit=crop",
-  ],
+//     "https://images.unsplash.com/photo-1486911278844-a81c5267e227?q=80&w=1600&auto=format&fit=crop",
+//   ],
 
-  amenities: [
-    "Mountain View Rooms",
-    "Luxury Suites",
-    "Spa & Wellness",
-    "Mountain Restaurant",
-    "Bonfire Area",
-    "Library Lounge",
-    "Outdoor Experiences",
-    "Private Dining",
-  ],
+//   amenities: [
+//     "Mountain View Rooms",
+//     "Luxury Suites",
+//     "Spa & Wellness",
+//     "Mountain Restaurant",
+//     "Bonfire Area",
+//     "Library Lounge",
+//     "Outdoor Experiences",
+//     "Private Dining",
+//   ],
 
-  dining: [
-    "Mountain View Restaurant",
-    "Himalayan Cuisine",
-    "Private Dining",
-    "Bonfire Dining",
-  ],
+//   dining: [
+//     "Mountain View Restaurant",
+//     "Himalayan Cuisine",
+//     "Private Dining",
+//     "Bonfire Dining",
+//   ],
 
-  experiences: [
-    "Panoramic Himalayan views",
-    "Peaceful mountain setting",
-    "Curated local experiences",
-    "Private dining experiences",
-  ],
+//   experiences: [
+//     "Panoramic Himalayan views",
+//     "Peaceful mountain setting",
+//     "Curated local experiences",
+//     "Private dining experiences",
+//   ],
 
-  phone: "+91 1902 456 700",
+//   phone: "+91 1902 456 700",
 
-  email: "reservations@vicohhotel.com",
-},
+//   email: "reservations@vicohhotel.com",
+// },
+
 
 {
   id: 4,
@@ -265,6 +341,7 @@ currency: "₹",
 
   email: "reservations@vicohhotel.com",
 },
+
 ];
 
 export const conferenceData = [
@@ -465,18 +542,19 @@ export const weddingsData =[
   }
 ];
 
+
 export const galleryData = [
   { 
-    url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop", 
+    url: "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/entrance2.jpg", 
     title: "Luxury Resort Sanctuary", 
   },
   { 
-    url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop", 
+    url: "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/room6.jpg", 
     title: "5-Star Heritage Suites", 
   },
   { 
-    url: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=800&auto=format&fit=crop", 
-    title: "Overwater Ocean Villas", 
+    url: "https://res.cloudinary.com/vax63czu/image/upload/v1790586451/Gallary.jpg", 
+    title: "Mnali Mountain View", 
   },
 
   { 

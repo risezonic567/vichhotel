@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   ArrowLeft,
@@ -13,6 +13,9 @@ import { ourHotelsData } from "../data/hospitalityData";
 
 const HotelDetails = () => {
   const { slug } = useParams();
+
+  const [showAllGallery, setShowAllGallery] = useState(false)
+  const INITIAL_IMAGE_COUNT = 6
 
   const hotel = ourHotelsData.find(
     (item) => item.slug === slug
@@ -146,7 +149,7 @@ const HotelDetails = () => {
         </div>
       </section>
 
-      <section className="px-6 md:px-12 pb-20">
+      {/* <section className="px-6 md:px-12 pb-20">
         <div className="max-w-7xl mx-auto">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -161,6 +164,37 @@ const HotelDetails = () => {
             ))}
 
           </div>
+
+        </div>
+      </section> */}
+
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {(showAllGallery
+              ? hotel.gallery
+              : hotel.gallery.slice(0, INITIAL_IMAGE_COUNT)
+            ).map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`${hotel.name} ${index + 1}`}
+                className="w-full h-[300px] object-cover"
+              />
+            ))}
+          </div>
+
+          {hotel.gallery.length > INITIAL_IMAGE_COUNT && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setShowAllGallery((prev) => !prev)}
+                className="inline-block border border-[#D4AF37] text-black px-8 py-3 text-xs uppercase tracking-[0.2em] hover:bg-[#D4AF37] hover:text-white transition-all cursor-pointer"
+              >
+                {showAllGallery ? "Show Less" : `View All Photos (${hotel.gallery.length})`}
+              </button>
+            </div>
+          )}
 
         </div>
       </section>

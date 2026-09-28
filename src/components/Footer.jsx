@@ -160,7 +160,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* BOTTOM */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-[#FAF9F6]/10 flex flex-col md:flex-row justify-between items-center text-sm text-[#FAF9F6]/60">
         <p>© {currentYear} Vicoh Hotel. All rights reserved.</p>
 

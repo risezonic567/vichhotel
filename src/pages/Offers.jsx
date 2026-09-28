@@ -58,36 +58,6 @@ const Offers = () => {
   return (
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
 
-     
-      {/* <section className="relative h-[65vh] min-h-[500px] md:mt-20 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=2000&auto=format&fit=crop"
-          alt="Luxury hotel room"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        <div className="absolute inset-0 bg-black/45" />
-
-        <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex items-end pb-20">
-          <div className="max-w-2xl text-white">
-            <span className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] font-semibold">
-              Exclusive Offers
-            </span>
-
-            <h1 className="text-4xl md:text-6xl font-serif leading-tight mt-4">
-              More Reasons
-              <br />
-              to Stay With Us.
-            </h1>
-
-            <p className="mt-6 text-sm md:text-base text-white/80 leading-7 max-w-xl">
-              Discover thoughtfully curated stays, seasonal experiences and
-              exclusive benefits created to make every Vicoh stay more special.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
        <section className="relative md:mt-20 min-h-[65vh] flex items-center justify-center overflow-hidden">
 
         <img
