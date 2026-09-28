@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Link, useParams } from "react-router-dom";
 import {
   ArrowLeft,
@@ -176,12 +178,21 @@ const HotelDetails = () => {
               ? hotel.gallery
               : hotel.gallery.slice(0, INITIAL_IMAGE_COUNT)
             ).map((image, index) => (
-              <img
+              // <img
+              //   key={index}
+              //   src={image}
+              //   alt={`${hotel.name} ${index + 1}`}
+              //   className="w-full h-[300px] object-cover"
+              // />
+
+                <LazyLoadImage
                 key={index}
                 src={image}
                 alt={`${hotel.name} ${index + 1}`}
+                effect="blue"
                 className="w-full h-[300px] object-cover"
-              />
+                />
+
             ))}
           </div>
 
