@@ -624,6 +624,8 @@ import LocationMap from '../components/home/LocationMap';
 import { weddingsData, galleryData, ourHotelsData } from '../data/hospitalityData';
 import FeaturedHotel from '../components/Featured';
 import DiningExperience from '../components/DiningExperience';
+import FAQSection from '../components/FAQSection';
+import { HotelFaqData } from '../data/faqData';
 
 // Framer Motion Animation Variants
 const fadeInUp = {
@@ -1205,7 +1207,6 @@ export default function Home() {
 
       <DiningExperience />
 
-      {/* Weddings Section */}
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -1319,6 +1320,9 @@ export default function Home() {
       </section>
 
       <Testimonials />
+        
+        <FAQSection title='Hotel FAQs' data={HotelFaqData} />
+
       <LocationMap />
     </div>
   );

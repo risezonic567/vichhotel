@@ -1,104 +1,81 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <footer className="bg-[#1C1C1C]/90 text-[#FAF9F6] border-t border-[#D4AF37]/20 pt-16 pb-12">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-[#1C1C1C] text-[#FAF9F6] border-t border-[#D4AF37]/30 pt-16 pb-10 relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
 
-        <div>
+        {/* BRAND / LOGO SECTION */}
+        <div className="space-y-4">
           <Link
             to="/"
             aria-label="Vicoh Hotel Home"
-            className=" focus:outline-none focus:ring-1 focus:ring-[#D4AF37] rounded z-10 transition-transform duration-300 hover:scale-105"
+            className="inline-block focus:outline-none focus:ring-1 focus:ring-[#D4AF37] rounded transition-transform duration-300 hover:scale-105"
           >
             <img
               src="/images/logo/viccccccooohhhhh.jpg__1_-removebg-preview (1).png"
               alt="Vicoh Hotel Logo"
-
-              className="w-auto object-contain transition-all duration-300 h-40"
-            />  
+              className="w-auto h-24 object-contain brightness-110"
+            />
           </Link>
 
-          <p className="text-sm text-[#FAF9F6]/60 leading-relaxed">
+          <p className="text-sm text-[#FAF9F6]/70 leading-relaxed max-w-sm font-light">
             An elegant retreat where refined hospitality, timeless comfort, and
             exceptional experiences come together to create unforgettable stays.
           </p>
         </div>
 
-        {/* NAVIGATION */}
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#D4AF37] mb-6">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-6 border-b border-[#D4AF37]/20 pb-2 inline-block">
             Explore
           </h4>
 
-          <ul className="space-y-3 text-sm tracking-wider text-[#FAF9F6]/80">
-            <li>
-              <Link to="/about-us" className="hover:text-[#D4AF37] transition-colors">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/our-hotels" className="hover:text-[#D4AF37] transition-colors">
-                Our Hotels
-              </Link>
-            </li>
-            <li>
-              <Link to="/conferences" className="hover:text-[#D4AF37] transition-colors">
-                Conferences
-              </Link>
-            </li>
-            <li>
-              <Link to="/weddings" className="hover:text-[#D4AF37] transition-colors">
-                Weddings
-              </Link>
-            </li>
-            <li>
-              <Link to="/offers" className="hover:text-[#D4AF37] transition-colors">
-                Offers
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-[#D4AF37] transition-colors">
-                Contact Us
-              </Link>
-            </li>
+          <ul className="space-y-3 text-sm tracking-wide text-[#FAF9F6]/80">
+            {[
+              { label: "About Us", path: "/about-us" },
+              { label: "Our Hotels", path: "/our-hotels" },
+              { label: "Conferences", path: "/conferences" },
+              { label: "Weddings", path: "/weddings" },
+              { label: "Offers", path: "/offers" },
+              { label: "Contact Us", path: "/contact" },
+            ].map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className="inline-block hover:text-[#D4AF37] hover:translate-x-1.5 transition-all duration-300"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* CONTACT */}
+        {/* CONTACT / CONCIERGE */}
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#D4AF37] mb-6">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-6 border-b border-[#D4AF37]/20 pb-2 inline-block">
             Hotel Concierge
           </h4>
 
-          <ul className="space-y-4 text-sm text-[#FAF9F6]/80">
-            <li className="flex items-start space-x-3">
-              <MapPin className="w-4 h-4 text-[#D4AF37] mt-0.5 shrink-0" />
-              <span>
+          <ul className="space-y-4 text-sm text-[#FAF9F6]/80 font-light">
+            <li className="flex items-start space-x-3 group">
+              <MapPin className="w-4 h-4 text-[#D4AF37] mt-1 shrink-0 group-hover:scale-110 transition-transform" />
+              <span className="leading-relaxed">
                 Arabian Sea Road,<br />
                 Mumbai, Maharashtra, India
               </span>
             </li>
 
-            <li className="flex items-center space-x-3">
-              <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" />
+            <li className="flex items-center space-x-3 group">
+              <Mail className="w-4 h-4 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
               <a
                 href="mailto:reservations@vicohhotel.com"
                 className="hover:text-[#D4AF37] transition-colors"
@@ -107,8 +84,8 @@ const Footer = () => {
               </a>
             </li>
 
-            <li className="flex items-center space-x-3">
-              <Phone className="w-4 h-4 text-[#D4AF37] shrink-0" />
+            <li className="flex items-center space-x-3 group">
+              <Phone className="w-4 h-4 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
               <a
                 href="tel:+912240000000"
                 className="hover:text-[#D4AF37] transition-colors"
@@ -119,57 +96,70 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* SOCIAL */}
+        {/* SOCIAL & CONNECT */}
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#D4AF37] mb-6">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-6 border-b border-[#D4AF37]/20 pb-2 inline-block">
             Connect With Us
           </h4>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[#FAF9F6]/80">
+          <p className="text-sm text-[#FAF9F6]/70 mb-4 font-light">
+            Follow our social channels for stories, updates and exclusive offers.
+          </p>
+
+          <div className="flex flex-col space-y-2.5 text-sm text-[#FAF9F6]/80">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#D4AF37] transition-colors"
+              className="inline-flex items-center justify-between border border-[#D4AF37]/20 px-3.5 py-2 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 rounded-sm"
             >
-              Instagram
+              <span>Instagram</span>
+              <span className="text-xs text-[#D4AF37]">→</span>
             </a>
-
-            <span className="text-[#D4AF37]/40">•</span>
 
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#D4AF37] transition-colors"
+              className="inline-flex items-center justify-between border border-[#D4AF37]/20 px-3.5 py-2 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 rounded-sm"
             >
-              Facebook
+              <span>Facebook</span>
+              <span className="text-xs text-[#D4AF37]">→</span>
             </a>
-
-            <span className="text-[#D4AF37]/40">•</span>
 
             <a
               href="https://wa.me/912240000000"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#D4AF37] transition-colors"
+              className="inline-flex items-center justify-between border border-[#D4AF37]/20 px-3.5 py-2 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 rounded-sm"
             >
-              WhatsApp
+              <span>WhatsApp</span>
+              <span className="text-xs text-[#D4AF37]">→</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-[#FAF9F6]/10 flex flex-col md:flex-row justify-between items-center text-sm text-[#FAF9F6]/60">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-[#FAF9F6]/10 flex flex-col md:flex-row justify-between items-center text-xs text-[#FAF9F6]/60 gap-4">
         <p>© {currentYear} Vicoh Hotel. All rights reserved.</p>
 
-        <div className="flex space-x-6 mt-4 md:mt-0">
-          <Link to="/privacy-policy" className="hover:text-[#FAF9F6] transition-colors">
+        <div className="flex items-center space-x-6">
+          <Link to="/privacy-policy" className="hover:text-[#D4AF37] transition-colors">
             Privacy Policy
           </Link>
-          <Link to="/terms" className="hover:text-[#FAF9F6] transition-colors">
+          <span className="text-[#D4AF37]/30">•</span>
+          <Link to="/terms-conditions" className="hover:text-[#D4AF37] transition-colors">
             Terms of Service
           </Link>
+          <span className="text-[#D4AF37]/30">•</span>
+          <button
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+            className="flex items-center cursor-pointer gap-1.5 hover:text-[#D4AF37] transition-colors"
+          >
+            <span>Top</span>
+            <ArrowUp className="w-3.5 h-3.5" />
+          </button>
         </div>
       </div>
     </footer>

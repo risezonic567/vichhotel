@@ -9,9 +9,10 @@ import {
   Mail,
   Phone,
   MapPin,
-} from "lucide-react";
+} from "lucide-react"
 
 import { ourHotelsData } from "../data/hospitalityData";
+
 
 const HotelDetails = () => {
   const { slug } = useParams();
@@ -326,6 +327,8 @@ const HotelDetails = () => {
 
         </div>
       </section>
+
+   
 
     </main>
   );

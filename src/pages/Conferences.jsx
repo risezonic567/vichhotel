@@ -10,6 +10,8 @@ import {
   MapPin,
   Building2,
 } from "lucide-react";
+import FAQSection from "../components/FAQSection";
+import { ConferencesFaqData } from "../data/faqData";
 
 export default function Conferences() {
   return (
@@ -306,6 +308,8 @@ export default function Conferences() {
           </Link>
 
         </div>
+            
+            <FAQSection title="Conference FAQs" data={ConferencesFaqData}/>
 
       </section>
 

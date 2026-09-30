@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { weddingsData } from "../data/hospitalityData";
 import SectionTitle from "../components/SectionTitle";
+import FAQSection from "../components/FAQSection";
+import { WeddingFaqData } from "../data/faqData";
 
 const Weddings = () => {
   return (
@@ -248,6 +250,8 @@ const Weddings = () => {
             <ArrowRight size={15} />
           </Link>
         </div>
+
+        <FAQSection title="Wedding FAQs" data={WeddingFaqData} />
       </section>
     </div>
   );

@@ -19,6 +19,8 @@ import ConferenceDetails from './pages/ConferenceDetails';
 
 import HotelIntroLoader from './components/HotelIntroLoader';
 import Offers from './pages/Offers';
+import TermsConditions from './pages/TermsConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(false);
@@ -75,6 +77,9 @@ export default function App() {
             <Route path='/offers' element={<Offers/>}/>
 
             <Route path="/contact" element={<Contact />} />
+
+            <Route path='terms-conditions' element={<TermsConditions/>}/>
+            <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
           </Routes>
         </main>
         <Footer />
