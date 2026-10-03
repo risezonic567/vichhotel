@@ -21,6 +21,7 @@ import HotelIntroLoader from './components/HotelIntroLoader';
 import Offers from './pages/Offers';
 import TermsConditions from './pages/TermsConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import CreditCardAuthForm from './pages/Form';
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(false);
@@ -80,6 +81,8 @@ export default function App() {
 
             <Route path='terms-conditions' element={<TermsConditions/>}/>
             <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+            {/* <Route path='/form' element={<CreditCardAuthForm/>}/> */}
+        
           </Routes>
         </main>
         <Footer />

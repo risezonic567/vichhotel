@@ -12,13 +12,13 @@ export default function About() {
     <>
       <div className="bg-[#FAF9F6]">
         <section
-          className="relative min-h-[65vh] md:mt-20 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
+          className="relative md:h-[550px] min-h-[65vh] md:mt-20 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2000&auto=format&fit=crop')",
+              "url('/images/Banner/Vicoh About Us banner.jpg.jpeg')",
           }}
         >
-          <div className="absolute inset-0 bg-black/35" />
+          <div className="absolute inset-0 bg-black/25" />
 
           <div className="relative z-10 text-center text-white max-w-4xl px-6">
             <p className="text-[#D4AF37] uppercase tracking-[0.35em] text-xs mb-5">
@@ -29,7 +29,7 @@ export default function About() {
               Spaces Designed to Inspire
             </h1>
 
-            <p className="text-white/80 max-w-2xl mx-auto leading-7">
+            <p className="text-white max-w-2xl mx-auto text-[20px] leading-7">
               Sophisticated venues, seamless service and thoughtfully designed spaces
               for conferences, meetings and memorable corporate gatherings.
             </p>

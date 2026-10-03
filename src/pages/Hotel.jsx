@@ -18,14 +18,20 @@ export default function Hotel() {
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
 
       {/* ================= HERO ================= */}
-      <section className="relative md:mt-20 min-h-[65vh] flex items-center justify-center overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2000&auto=format&fit=crop"
+     <section
+          className="relative md:h-[550px] min-h-[65vh] md:mt-20 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
+          style={{
+            backgroundImage:
+              "url('/images/Banner/Vicoh Our hotel banner.jpg.jpeg')",
+          }}
+        >
+        {/* <img
+          src="/images/Banner/Vicoh Our hotel banner.jpg.jpeg"
           alt="Vicoh Hotels"
           className="absolute inset-0 w-full h-full object-cover"
-        />
+        /> */}
 
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/25" />
 
         <div className="relative z-10 text-center text-white max-w-4xl px-6">
           <p className="text-[#D4AF37] uppercase tracking-[0.25em] text-xs mb-4 font-semibold">
@@ -36,7 +42,7 @@ export default function Hotel() {
             A Collection of Exceptional Stays
           </h1>
 
-          <p className="text-white/80 max-w-2xl mx-auto leading-relaxed text-base md:text-lg font-light">
+          <p className="text-white text-[20px] max-w-2xl mx-auto leading-relaxed  font-light">
             Discover distinctive Vicoh properties across India's most
             inspiring destinations, where refined hospitality meets
             unforgettable experiences.

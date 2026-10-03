@@ -13,7 +13,6 @@ const Footer = () => {
     <footer className="bg-[#1C1C1C] text-[#FAF9F6] border-t border-[#D4AF37]/30 pt-16 pb-10 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
 
-        {/* BRAND / LOGO SECTION */}
         <div className="space-y-4">
           <Link
             to="/"
@@ -23,7 +22,7 @@ const Footer = () => {
             <img
               src="/images/logo/viccccccooohhhhh.jpg__1_-removebg-preview (1).png"
               alt="Vicoh Hotel Logo"
-              className="w-auto h-24 object-contain brightness-110"
+              className="w-auto h-32 object-contain brightness-110"
             />
           </Link>
 
@@ -33,7 +32,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div>
+        <div> 
           <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-6 border-b border-[#D4AF37]/20 pb-2 inline-block">
             Explore
           </h4>
@@ -59,7 +58,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* CONTACT / CONCIERGE */}
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-6 border-b border-[#D4AF37]/20 pb-2 inline-block">
             Hotel Concierge
@@ -96,7 +94,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* SOCIAL & CONNECT */}
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-6 border-b border-[#D4AF37]/20 pb-2 inline-block">
             Connect With Us

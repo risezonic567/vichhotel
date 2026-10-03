@@ -19,7 +19,6 @@ export default function FeaturedHotel({ hotel }) {
     <section className="bg-[#FAF9F6] py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-        {/* Section Heading */}
         <SectionTitle
           subtitle="Featured Hotel"
           title="A Stay Designed to Be Remembered."
