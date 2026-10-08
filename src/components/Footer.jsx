@@ -75,20 +75,20 @@ const Footer = () => {
             <li className="flex items-center space-x-3 group">
               <Mail className="w-4 h-4 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
               <a
-                href="mailto:reservations@vicohhotel.com"
+                href="mailto:info.vicoh@gmail.com"
                 className="hover:text-[#D4AF37] transition-colors"
               >
-                reservations@vicohhotel.com
+                info.vicoh@gmail.com
               </a>
             </li>
 
             <li className="flex items-center space-x-3 group">
               <Phone className="w-4 h-4 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
               <a
-                href="tel:+912240000000"
+                href="tel:+91 92667 30494"
                 className="hover:text-[#D4AF37] transition-colors"
               >
-                +91 22 4000 0000
+                +91 92667 30494
               </a>
             </li>
           </ul>
