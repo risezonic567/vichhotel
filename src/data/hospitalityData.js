@@ -1,346 +1,298 @@
 // Centralized editable placeholder data for Vibe Collective Hospitality
 export const ourHotelsData = [
-{
-  id: 1,
-  slug: "vicoh-grand-mumbai",
+  {
+    id: 1,
+    slug: "vicoh-grand-mumbai",
 
-  name: "Vicoh Grand Mumbai",
+    name: "Vicoh Grand Mumbai",
 
-  location: "Mumbai, Maharashtra",
+    location: "Mumbai, Maharashtra",
 
-  heroImage:
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
-
-    rating: 4.8,
-reviews: 324,
-price: 8500,
-currency: "₹",
-
-  category: "Luxury Hotel",
-
-  shortDescription:
-    "A sophisticated urban retreat combining contemporary luxury, refined hospitality, and exceptional city experiences.",
-
-  description:
-    "Vicoh Grand Mumbai offers an elegant stay in the heart of the city, thoughtfully designed for both business and leisure travellers. From beautifully appointed rooms to curated dining and attentive service, every element is designed around comfort and effortless luxury.",
-
-  rooms: "185 Rooms & Suites",
-
-  checkIn: "2:00 PM",
-
-  checkOut: "12:00 PM",
-
-  gallery: [
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
-
-    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop",
-
-    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
-  ],
-
-  amenities: [
-    "Luxury Rooms & Suites",
-    "Fine Dining Restaurant",
-    "Rooftop Lounge",
-    "Fitness Centre",
-    "Swimming Pool",
-    "24/7 Concierge",
-    "Business Centre",
-    "Valet Parking",
-  ],
-
-  dining: [
-    "All-Day Dining Restaurant",
-    "Signature Fine Dining",
-    "Rooftop Lounge",
-    "In-Room Dining",
-  ],
-
-  experiences: [
-    "Central city location",
-    "Premium rooms and suites",
-    "Curated dining experiences",
-    "Dedicated concierge service",
-  ],
-
-  phone: "+91 22 4567 8900",
-
-  email: "reservations@vicohhotel.com",
-},
-
-{
-  id: 2,
-  slug: "sparklyn-view-manali",
-  name: "Sparklyn View, Manali",
-  location: "Manali, Himachal Pradesh",
-
- 
-  heroImage: "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/room6.jpg",
-
-  rating: 4.8,
-  reviews: 324,
-  price: 8500,
-  currency: "₹",
-
-  category: "Mountain Retreat",
-
-  shortDescription:
-    "A tranquil mountain retreat in Manali featuring centrally heated rooms, personal balconies, and stunning scenic views.",
-
-  description:
-    "Set against the dramatic landscape of Manali, VICOH Sparklyn View offers a peaceful escape with 17 well-appointed rooms, including 9 centrally heated rooms and personal balcony spaces for breathtaking views.",
-
-  rooms: "17 Keys / Rooms",
-
-  checkIn: "2:00 PM",
-  checkOut: "12:00 PM",
-
-  gallery: [
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/buildingview1.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/entrance2.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/receptions3.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580910/lobby4.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580897/gallery5.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/room6.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580920/room7.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580923/room8.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580919/room9.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/balcony10.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580911/kitchen11.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580899/diningarea12.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580899/diningarea13.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580908/img14.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1790580910/img16.jpg",
-  ],
-
-  amenities: [
-    "17 Keys / Rooms",
-    "9 Centrally Heated Rooms",
-    "Personal Balcony Rooms",
-    "Mountain View Rooms",
-    "Luxury Suites",
-    "Spa & Wellness",
-    "Mountain Restaurant",
-    "Bonfire Area",
-  ],
-
-  dining: [
-    "Mountain View Restaurant",
-    "Himalayan Cuisine",
-    "Private Dining",
-    "Bonfire Dining",
-  ],
-
-  experiences: [
-    "Panoramic Himalayan views from personal balcony",
-    "Centrally heated room comfort",
-    "Peaceful mountain setting",
-    "Curated local experiences",
-  ],
-
-  phone: "+91 1902 456 700",
-  email: "reservations@vicohhotel.com",
-},
-
-
- {
-  id: 3,
-  slug: "vicoh-palace-goa",
-  name: "Vicoh Palace Goa",
-  location: "North Goa, India",
-
-  heroImage:
-    "https://images.unsplash.com/photo-1582610116397-edb318620f90?q=80&w=1600&auto=format&fit=crop",
+    heroImage:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
 
     rating: 4.8,
-reviews: 324,
-price: 8500,
-currency: "₹",
+    reviews: 324,
+    price: 8500,
+    currency: "₹",
 
-  category: "Beach Resort",
+    category: "Luxury Hotel",
 
-  shortDescription:
-    "A serene coastal escape where tropical surroundings meet timeless elegance and relaxed luxury.",
+    shortDescription:
+      "A sophisticated urban retreat combining contemporary luxury, refined hospitality, and exceptional city experiences.",
 
-  description:
-    "Vicoh Palace Goa is an elegant destination for guests seeking a refined coastal retreat. Surrounded by tropical landscapes and close to Goa's celebrated beaches, the property blends contemporary comfort with warm Indian hospitality.",
+    description:
+      "Vicoh Grand Mumbai offers an elegant stay in the heart of the city, thoughtfully designed for both business and leisure travellers. From beautifully appointed rooms to curated dining and attentive service, every element is designed around comfort and effortless luxury.",
 
-  rooms: "120 Rooms & Villas",
+    rooms: "185 Rooms & Suites",
 
-  checkIn: "2:00 PM",
+    checkIn: "2:00 PM",
 
-  checkOut: "12:00 PM",
+    checkOut: "12:00 PM",
 
-  gallery: [
-    "https://images.unsplash.com/photo-1582610116397-edb318620f90?q=80&w=1600&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
 
-    "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop",
 
-    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
-  ],
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
+    ],
 
-  amenities: [
-    "Luxury Villas",
-    "Private Pool",
-    "Beach Access",
-    "All-Day Dining",
-    "Spa & Wellness",
-    "Infinity Pool",
-    "Poolside Bar",
-    "Event Lawn",
-  ],
+    amenities: [
+      "Luxury Rooms & Suites",
+      "Fine Dining Restaurant",
+      "Rooftop Lounge",
+      "Fitness Centre",
+      "Swimming Pool",
+      "24/7 Concierge",
+      "Business Centre",
+      "Valet Parking",
+    ],
 
-  dining: [
-    "All-Day Coastal Dining",
-    "Signature Restaurant",
-    "Poolside Dining",
-    "Private Beach Dining",
-  ],
+    dining: [
+      "All-Day Dining Restaurant",
+      "Signature Fine Dining",
+      "Rooftop Lounge",
+      "In-Room Dining",
+    ],
 
-  experiences: [
-    "Close to pristine beaches",
-    "Private villas",
-    "Wellness and spa experiences",
-    "Destination celebrations",
-  ],
+    experiences: [
+      "Central city location",
+      "Premium rooms and suites",
+      "Curated dining experiences",
+      "Dedicated concierge service",
+    ],
 
-  phone: "+91 832 456 7800",
+    phone: "+91 22 4567 8900",
 
-  email: "reservations@vicohhotel.com",
-},
+    email: "reservations@vicohhotel.com",
+  },
 
-// {
-//   id: 3,
-//   slug: "vicoh-hills-manali",
-//   name: "Vicoh Hills Manali",
-//   location: "Manali, Himachal Pradesh",
-
-//   heroImage:
-//     "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
-
-//     rating: 4.8,
-// reviews: 324,
-// price: 8500,
-// currency: "₹",
-
-//   category: "Mountain Retreat",
-
-//   shortDescription:
-//     "A tranquil mountain retreat offering breathtaking views, elegant interiors, and immersive Himalayan experiences.",
-
-//   description:
-//     "Set against the dramatic landscape of the Himalayas, Vicoh Hills Manali offers a peaceful escape surrounded by nature. Guests can enjoy thoughtfully designed accommodations, locally inspired cuisine, wellness experiences, and curated mountain adventures.",
-
-//   rooms: "86 Rooms & Suites",
-
-//   checkIn: "2:00 PM",
-
-//   checkOut: "12:00 PM",
-
-//   gallery: [
-//     "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
-
-//     "https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=1600&auto=format&fit=crop",
-
-//     "https://images.unsplash.com/photo-1486911278844-a81c5267e227?q=80&w=1600&auto=format&fit=crop",
-//   ],
-
-//   amenities: [
-//     "Mountain View Rooms",
-//     "Luxury Suites",
-//     "Spa & Wellness",
-//     "Mountain Restaurant",
-//     "Bonfire Area",
-//     "Library Lounge",
-//     "Outdoor Experiences",
-//     "Private Dining",
-//   ],
-
-//   dining: [
-//     "Mountain View Restaurant",
-//     "Himalayan Cuisine",
-//     "Private Dining",
-//     "Bonfire Dining",
-//   ],
-
-//   experiences: [
-//     "Panoramic Himalayan views",
-//     "Peaceful mountain setting",
-//     "Curated local experiences",
-//     "Private dining experiences",
-//   ],
-
-//   phone: "+91 1902 456 700",
-
-//   email: "reservations@vicohhotel.com",
-// },
+  {
+    id: 2,
+    slug: "sparklyn-view-manali",
+    name: "Sparklyn View, Manali",
+    location: "Manali, Himachal Pradesh",
 
 
-{
-  id: 4,
-  slug: "vicoh-royale-jaipur",
-  name: "Vicoh Royale Jaipur",
-  location: "Jaipur, Rajasthan",
-
-  heroImage:
-    "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600&auto=format&fit=crop",
+    heroImage: "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580914/room6.jpg",
 
     rating: 4.8,
-reviews: 324,
-price: 8500,
-currency: "₹",
+    reviews: 324,
+    price: 8500,
+    currency: "₹",
 
-  category: "Heritage Luxury Hotel",
+    category: "Mountain Retreat",
 
-  shortDescription:
-    "A regal Jaipur retreat inspired by Rajasthan's architectural heritage and celebrated traditions.",
+    shortDescription:
+      "A tranquil mountain retreat in Manali featuring centrally heated rooms, personal balconies, and stunning scenic views.",
 
-  description:
-    "Vicoh Royale Jaipur brings together the grandeur of Rajasthan with contemporary luxury. Designed around the region's artistic heritage, the hotel offers elegant accommodations, traditional culinary experiences, and sophisticated spaces for celebrations and events.",
+    description:
+      "Set against the dramatic landscape of Manali, VICOH Sparklyn View offers a peaceful escape with 17 well-appointed rooms, including 9 centrally heated rooms and personal balcony spaces for breathtaking views.",
 
-  rooms: "104 Rooms & Suites",
+    rooms: "17 Keys / Rooms",
 
-  checkIn: "2:00 PM",
+    checkIn: "2:00 PM",
+    checkOut: "12:00 PM",
 
-  checkOut: "12:00 PM",
+    gallery: [
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580901/buildingview1.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580901/entrance2.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580914/receptions3.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580910/lobby4.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580897/gallery5.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580914/room6.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580920/room7.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580923/room8.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580919/room9.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580901/balcony10.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580911/kitchen11.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580899/diningarea12.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580899/diningarea13.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580908/img14.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580910/img16.jpg",
+    ],
 
-  gallery: [
-    "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600&auto=format&fit=crop",
+    amenities: [
+      "17 Keys / Rooms",
+      "9 Centrally Heated Rooms",
+      "Personal Balcony Rooms",
+      "Mountain View Rooms",
+      "Luxury Suites",
+      "Spa & Wellness",
+      "Mountain Restaurant",
+      "Bonfire Area",
+    ],
 
-    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
+    dining: [
+      "Mountain View Restaurant",
+      "Himalayan Cuisine",
+      "Private Dining",
+      "Bonfire Dining",
+    ],
 
-    "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=1600&auto=format&fit=crop",
-  ],
+    experiences: [
+      "Panoramic Himalayan views from personal balcony",
+      "Centrally heated room comfort",
+      "Peaceful mountain setting",
+      "Curated local experiences",
+    ],
 
-  amenities: [
-    "Heritage Suites",
-    "Royal Dining",
-    "Swimming Pool",
-    "Luxury Spa",
-    "Courtyard",
-    "Wedding Venues",
-    "Conference Facilities",
-    "Concierge Service",
-  ],
+    phone: "+91 1902 456 700",
+    email: "reservations@vicohhotel.com",
+  },
 
-  dining: [
-    "Royal Rajasthani Dining",
-    "Signature Restaurant",
-    "Courtyard Dining",
-    "Private Celebration Dining",
-  ],
 
-  experiences: [
-    "Rajasthani-inspired architecture",
-    "Luxury heritage suites",
-    "Destination weddings",
-    "Royal dining experiences",
-  ],
+  {
+    id: 3,
+    slug: "cielorra-villas-goa",
+    name: "Cielorra Villas",
+    location: "Saligao, North Goa, India",
 
-  phone: "+91 141 456 7800",
+    heroImage:
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546574/44.jpg",
 
-  email: "reservations@vicohhotel.com",
-},
+    rating: 4.8,
+    reviews: 324,
+    price: 22000,
+    currency: "₹",
+
+    category: "Private Villa",
+
+    shortDescription:
+      "A private 4-bedroom pool villa in Saligao, just 10 minutes from Calangute Beach, made for family vacations and friends' getaways.",
+
+    description:
+      "Cielorra Villas is a beautifully designed private retreat in Saligao, North Goa, only 10 minutes from Calangute Beach. With four spacious bedrooms, a private swimming pool, aesthetic living areas and a fully equipped kitchen, it is perfect for family vacations, friends' getaways, celebrations and special occasions in Goa.",
+
+    rooms: "4 Bedrooms · Up to 10 Guests",
+
+    checkIn: "2:00 PM",
+
+    checkOut: "12:00 PM",
+
+    gallery: [
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546572/4.jpg",
+
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546560/3S7A0862-HDR.jpg.jpg",
+
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546565/3S7A0934-HDR.jpg.jpg",
+
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546562/3.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546554/1.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546568/3S7A1030-HDR.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546571/3S7A1042-HDR.jpg.jpg", "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546568/3S7A1026-HDR.jpg.jpg", "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546561/3S7A0894-HDR.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546558/3S7A0838-HDR.jpg.jpg", "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546556/3S7A0834-HDR.jpg.jpg", "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546555/3S7A0728-HDR.jpg.jpg", "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546556/3S7A0744-HDR.jpg.jpg",
+    ],
+
+    amenities: [
+      "4 Spacious Bedrooms",
+      "Private Swimming Pool",
+      "Aesthetic Living Areas",
+      "Fully Equipped Kitchen",
+      "Dedicated Parking",
+      "Private Chef (on request)",
+      "Barbecue Setup (on request)",
+      "Up to 10 Guests",
+    ],
+
+    dining: [
+      "Private Chef (on request)",
+      "Barbecue Setup (on request)",
+      "Fully Equipped Kitchen for Self-Cooking",
+    ],
+
+    experiences: [
+      "10 minutes from Calangute Beach",
+      "Private pool for your group",
+      "Family vacations and friends' getaways",
+      "Celebrations and special occasions",
+    ],
+
+    phone: "+91 89294 63367",
+
+    email: "",
+  },
+
+
+  {
+    id: 4,
+    slug: "cielorra-villas-assagao",
+    name: "Cielorra Villas – Assagao",
+    location: "Assagao, North Goa, India",
+
+    heroImage:
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548787/3S7A0199-HDR_1.jpg.jpg",
+
+    rating: 4.8,
+    reviews: 324,
+    price: 17000,
+    currency: "₹",
+
+    category: "Private Villa",
+
+    shortDescription:
+      "A peaceful 3-bedroom pool villa in Assagao, one of Goa's most sought-after locations, close to Anjuna, Calangute and Candolim.",
+
+    description:
+      "Cielorra Villas in Assagao is a private luxury retreat in North Goa with three spacious bedrooms, a private swimming pool, an elegant living and dining area and a fully equipped kitchen. Perfect for family holidays, friends' getaways and celebrations, it offers a peaceful stay close to Anjuna Beach, Parra Coconut Tree Road, Calangute and Candolim.",
+
+    rooms: "3 Bedrooms · Up to 6 Guests",
+
+    checkIn: "2:00 PM",
+
+    checkOut: "12:00 PM",
+
+    gallery: [
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548800/3S7A0351-HDR_1.jpg.jpg",
+
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548793/3S7A0263-HDR_1.jpg.jpg",
+
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548792/3S7A0259-HDR_1.jpg.jpg",
+
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548787/3S7A0199-HDR_1.jpg.jpg",
+
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548779/3S7A0123-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548780/3S7A0115-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548777/3S7A0059-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548781/3S7A0131-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548789/3S7A0219-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548795/3S7A0291-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548793/3S7A0263-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548783/3S7A0147-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548799/3S7A0343-HDR_1.jpg.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548778/3S7A0091-HDR_1.jpg.jpg",
+    ],
+
+    amenities: [
+      "3 Spacious Bedrooms",
+      "Private Swimming Pool",
+      "Elegant Living & Dining Area",
+      "Fully Equipped Kitchen",
+      "Dedicated Parking",
+      "Private Chef (on request)",
+      "Barbecue Setup (on request)",
+      "Up to 6 Guests",
+    ],
+
+    dining: [
+      "Private Chef (on request)",
+      "Barbecue Setup (on request)",
+      "Fully Equipped Kitchen for Self-Cooking",
+      "Elegant Indoor Dining Area",
+    ],
+
+    experiences: [
+      "Anjuna Beach nearby",
+      "Parra Coconut Tree Road",
+      "Calangute and Candolim beaches",
+      "Family holidays and friends' getaways",
+    ],
+
+    phone: "+91 89294 63367",
+
+    email: "",
+  },
 
 ];
 
@@ -482,8 +434,7 @@ export const conferenceData = [
 ];
 
 
-
-export const weddingsData =[
+export const weddingsData = [
   {
     id: "udaipur-destination-wedding",
     slug: "udaipur-destination-wedding",
@@ -544,51 +495,51 @@ export const weddingsData =[
 
 
 export const galleryData = [
-  { 
-    url: "https://res.cloudinary.com/vax63czu/image/upload/v1790580901/entrance2.jpg", 
-    title: "Luxury Resort Sanctuary", 
+  {
+    url: "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580901/entrance2.jpg",
+    title: "Luxury Resort Sanctuary",
   },
-  { 
-    url: "https://res.cloudinary.com/vax63czu/image/upload/v1790580914/room6.jpg", 
-    title: "5-Star Heritage Suites", 
+  {
+    url: "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580914/room6.jpg",
+    title: "5-Star Heritage Suites",
   },
-  { 
-    url: "https://res.cloudinary.com/vax63czu/image/upload/v1790586451/Gallary.jpg", 
-    title: "Mnali Mountain View", 
-  },
-
-  { 
-    url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop", 
-    title: "Regal Mandap Celebrations", 
-  },
-  { 
-    url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop", 
-    title: "Beachfront Sunset Vows", 
-  },
-  { 
-    url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop", 
-    title: "Royal Reception Galas", 
+  {
+    url: "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790586451/Gallary.jpg",
+    title: "Mnali Mountain View",
   },
 
-  { 
-    url: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop", 
-    title: "Corporate Summits & Galas", 
+  {
+    url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop",
+    title: "Regal Mandap Celebrations",
   },
-  { 
-    url: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop", 
-    title: "Imperial Palace Dinners", 
+  {
+    url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop",
+    title: "Beachfront Sunset Vows",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop",
+    title: "Royal Reception Galas",
   },
 
-  { 
-    url: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop", 
-    title: "Alpine Chalet Retreats", 
+  {
+    url: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop",
+    title: "Corporate Summits & Galas",
   },
-  { 
-    url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop", 
-    title: "Tropical Island Expeditions", 
+  {
+    url: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop",
+    title: "Imperial Palace Dinners",
   },
-  { 
-    url: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3?q=80&w=800&auto=format&fit=crop", 
-    title: "Desert Safari Journeys", 
+
+  {
+    url: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop",
+    title: "Alpine Chalet Retreats",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop",
+    title: "Tropical Island Expeditions",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3?q=80&w=800&auto=format&fit=crop",
+    title: "Desert Safari Journeys",
   }
 ];

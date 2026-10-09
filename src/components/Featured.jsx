@@ -10,6 +10,7 @@ import {
   BedDouble,
 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
+import { getCloudinaryImageUrl } from "../utils/cloudinaryImage";
 
 export default function FeaturedHotel({ hotel }) {
     
@@ -31,9 +32,10 @@ export default function FeaturedHotel({ hotel }) {
           <div className="relative h-[420px] md:h-[520px] lg:h-[600px] overflow-hidden group">
 
             <img
-              src={hotel.heroImage}
+              src={getCloudinaryImageUrl(hotel.heroImage, 1400)}
               alt={hotel.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
             />
 
             {/* Overlay */}

@@ -624,6 +624,7 @@ import LocationMap from '../components/home/LocationMap';
 import { weddingsData, galleryData, ourHotelsData } from '../data/hospitalityData';
 import FeaturedHotel from '../components/Featured';
 import DiningExperience from '../components/DiningExperience';
+import { getCloudinaryImageUrl } from '../utils/cloudinaryImage';
 import FAQSection from '../components/FAQSection';
 import { HotelFaqData } from '../data/faqData';
 
@@ -1157,9 +1158,10 @@ export default function Home() {
             >
               <div className="h-64 overflow-hidden relative">
                 <img
-                  src={hotel.heroImage}
+                  src={getCloudinaryImageUrl(hotel.heroImage, 900)}
                   alt={hotel.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
 

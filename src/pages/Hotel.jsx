@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import FAQSection from "../components/FAQSection";
 import { HotelFaqData } from "../data/faqData";
+import { getCloudinaryImageUrl } from "../utils/cloudinaryImage";
 
 export default function Hotel() {
   return (
@@ -87,9 +88,10 @@ export default function Hotel() {
             >
               <div className="h-72 overflow-hidden relative">
                 <img
-                  src={hotel.heroImage}
+                  src={getCloudinaryImageUrl(hotel.heroImage, 900)}
                   alt={hotel.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
 
                 {/* Issue #4 Fixed: Category label formatting */}

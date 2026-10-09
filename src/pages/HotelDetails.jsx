@@ -12,6 +12,7 @@ import {
 } from "lucide-react"
 
 import { ourHotelsData } from "../data/hospitalityData";
+import { getCloudinaryImageUrl } from "../utils/cloudinaryImage";
 
 
 const HotelDetails = () => {
@@ -55,9 +56,10 @@ const HotelDetails = () => {
 
       <section className="relative md:mt-20 h-[70vh] min-h-[550px]">
         <img
-          src={hotel.heroImage}
+          src={getCloudinaryImageUrl(hotel.heroImage, 2000)}
           alt={hotel.name}
           className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
         />
 
         <div className="absolute inset-0 bg-black/45" />
@@ -188,10 +190,11 @@ const HotelDetails = () => {
 
                 <LazyLoadImage
                 key={index}
-                src={image}
+                src={getCloudinaryImageUrl(image, 900)}
                 alt={`${hotel.name} ${index + 1}`}
                 effect="blue"
-                className="w-full h-[300px] object-cover"
+                className=" w-full  h-[300px] object-cover"
+                loading="lazy"
                 />
 
             ))}
