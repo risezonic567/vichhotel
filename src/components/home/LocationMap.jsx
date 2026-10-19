@@ -1,9 +1,10 @@
 import React from 'react';
 import SectionTitle from '../SectionTitle';
+import Reveal from '../Reveal';
 
 export default function LocationMap() {
   return (
-    <section className=" py-7 px-4 md:px-10 max-w-6xl mx-auto">
+    <Reveal as="section" variant="arch" className=" py-7 px-4 md:px-10 max-w-6xl mx-auto">
       <div className="text-center max-w-2xl mx-auto mb-10">
         <SectionTitle
           subtitle="Location"
@@ -21,6 +22,6 @@ export default function LocationMap() {
           loading="lazy"
         ></iframe>
       </div>
-    </section>
+    </Reveal>
   );
 }

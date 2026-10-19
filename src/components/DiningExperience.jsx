@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Utensils } from "lucide-react";
 import SectionTitle from "./SectionTitle";
+import Reveal from "./Reveal";
+import { themeFor } from "../config/sectionThemes";
 
 // TODO: client verify dining venues, descriptions and imagery before publishing.
 const diningData = [
@@ -33,13 +35,14 @@ const diningData = [
 
 export default function DiningExperience() {
     return (
-        <section className=" py-16 md:py-28">
+        <Reveal as="section" variant={themeFor("Dining Experience")} className=" py-16 md:py-28">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
 
                 {/* Section Heading */}
                 <SectionTitle
-                    subtitle="Dining Experience"
-                    title="A Culinary Journey Worth Savoring."
+                    subtitle="Dining "
+                    title="Food, the Way You Like It"
+                    paragraph="Want a home-cooked feel on holiday? At our Goa villas, you can book a private chef and add a barbecue evening by the pool. Both are available on request, so you eat what you like, when you like."
                 />
 
                 {/* <div className="max-w-2xl mt-8 mb-14">
@@ -53,10 +56,8 @@ export default function DiningExperience() {
                 {/* Dining Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {diningData.map((item, index) => (
-                        <div
-                            key={index}
-                            className="group relative overflow-hidden bg-black h-[480px]"
-                        >
+                        <Reveal key={index} variant="arch" delay={index * 0.12}>
+                        <div className="group relative overflow-hidden bg-black h-[480px]">
                             <img
                                 src={item.image}
                                 alt={item.title}
@@ -94,6 +95,7 @@ export default function DiningExperience() {
                 </div> */}
                             </div>
                         </div>
+                        </Reveal>
                     ))}
                 </div>
 
@@ -107,6 +109,6 @@ export default function DiningExperience() {
                     </Link>
                 </div>
             </div>
-        </section>
+        </Reveal>
     );
 }

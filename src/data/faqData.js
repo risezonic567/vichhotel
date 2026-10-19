@@ -1,24 +1,24 @@
 // TODO: client verify all property policies and service claims before publishing.
 export const HotelFaqData = [
   {
-    question: "What are the standard check-in and check-out times?",
-    answer: "Check-in begins at 2:00 PM, and check-out is until 11:00 AM. Early check-in or late check-out is subject to availability and may incur an additional charge."
+    question: "Where are VICOH properties located?",
+    answer: "We have stays in Jim Corbett, Manali, Goa, Jaipur, Rishikesh, Bhimtal, and Dehradun."
   },
   {
-    question: "Is complimentary Wi-Fi available throughout the hotel?",
-    answer: "Yes, high-speed complimentary Wi-Fi is available in all guest rooms, suites, and public areas across all our properties."
+    question: "Do the Goa villas have a private pool?",
+    answer: "Yes. Every Cielorra villa has its own private swimming pool."
   },
   {
-    question: "What is your cancellation and refund policy?",
-    answer: "Cancellations made up to 48 hours prior to check-in are eligible for a full refund. Cancellations within 48 hours of arrival will be charged the first night's room rate."
+    question: "How many guests can stay in a villa?",
+    answer: "Our 3-bedroom villas in Assagao and Anjuna host up to 6 guests. The 4-bedroom villa in Saligao hosts up to 10."
   },
   {
-    question: "Do you offer airport transfer services?",
-    answer: "Yes, we offer luxury private airport transfers upon request. Please contact our concierge team at least 24 hours prior to arrival to arrange your pickup."
+    question: "Can I book a private chef?",
+    answer: "Yes. A private chef and barbecue setup are available on request at our Goa villas."
   },
   {
-    question: "Are pets allowed at Vicoh Hotel properties?",
-    answer: "Some of our boutique and resort properties feature pet-friendly accommodation options. Please check with the specific property before booking to confirm guidelines."
+    question: "How do I book a stay?",
+    answer: "Pick your destination on our website, choose your dates, and book online. You can also call us directly.[+91 92667 30494]"
   }
 ];
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Reveal from './Reveal';
 
 export default function FAQSection({ 
   subtitle = "NEED HELP?",
@@ -17,7 +18,7 @@ export default function FAQSection({
   if (!data || data.length === 0) return null;
 
   return (
-    <section className={`py-20 px-4 sm:px-6 lg:px-8 transition-colors ${
+    <Reveal as="section" variant="arch" className={`py-20 px-4 sm:px-6 lg:px-8 transition-colors ${
       darkMode ? 'bg-neutral-950 text-stone-100' : 'bg-stone-50 text-stone-900'
     }`}>
       <div className="max-w-4xl mx-auto">
@@ -104,6 +105,6 @@ export default function FAQSection({
           })}
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

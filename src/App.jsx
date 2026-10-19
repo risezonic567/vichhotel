@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useState } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 
@@ -25,23 +25,14 @@ const Dining = lazy(() => import('./pages/Dining'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
-  const [showLoader, setShowLoader] = useState(false);
-  const [isAppReady, setIsAppReady] = useState(false);
-
-  useEffect(() => {
-    const hasSeenIntro = sessionStorage.getItem('vicoh_intro_seen');
-
-    if (!hasSeenIntro) {
-      setShowLoader(true);
-    } else {
-      setIsAppReady(true);
-    }
-  }, []);
+  const [isAppReady, setIsAppReady] = useState(
+    () => Boolean(sessionStorage.getItem('vicoh_intro_seen'))
+  );
+  const showLoader = !isAppReady;
 
   const handleLoaderComplete = () => {
     sessionStorage.setItem('vicoh_intro_seen', 'true');
     
-    setShowLoader(false);
     setIsAppReady(true);
   };
 
@@ -54,7 +45,7 @@ export default function App() {
       )}
 
       <div
-        className={`min-h-screen flex flex-col font-sans bg-[#FAF9F6] text-[#1C1C1C] antialiased transition-opacity duration-1000 ease-out ${
+        className={`min-h-screen flex flex-col font-sans bg-[#FAF9F6] text-[#1C1C1C] antialiased transition-opacity duration-500 ease-out ${
           isAppReady ? 'opacity-100' : 'opacity-0'
         }`}
       >

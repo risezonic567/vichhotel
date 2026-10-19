@@ -4,6 +4,7 @@ import Testimonials from '../components/home/Testimonials';
 import FeaturedHotel from '../components/Featured';
 
 import { ourHotelsData } from "../data/hospitalityData"
+import SectionDivider from '../components/SectionDivider';
 
 export default function About() {
   const featuredHotel = ourHotelsData.find(
@@ -15,7 +16,7 @@ export default function About() {
           className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
-              "url('/images/Banner/Vicoh About Us banner.jpg.jpeg')",
+              "url('/images/Banner/Vicoh About Us banner.webp')",
           }}
         >
           <div className="absolute inset-0 bg-black/25" />
@@ -36,10 +37,13 @@ export default function About() {
           </div>
         </section>
 
+        <SectionDivider variant="arch" />
         <AboutIntro />
 
+        <SectionDivider variant="arch" />
         <FeaturedHotel hotel={featuredHotel} />
 
+        <SectionDivider variant="doors" />
         <Testimonials />
 
 

@@ -9,7 +9,6 @@ import {
   Building2,
   ChevronLeft,
   ChevronRight,
-  X,
 } from 'lucide-react';
 
 import SectionTitle from '../components/SectionTitle';
@@ -23,8 +22,7 @@ import DiningExperience from '../components/DiningExperience';
 import { getCloudinaryImageUrl } from '../utils/cloudinaryImage';
 import FAQSection from '../components/FAQSection';
 import { HotelFaqData } from '../data/faqData';
-import ArchDivider from '../components/ArchDivider';
-import Section from '../components/Section';
+import SectionDivider from '../components/SectionDivider';
 
 // Framer Motion Animation Variants
 const fadeInUp = {
@@ -192,7 +190,7 @@ export default function Home() {
   );
 
   return (
-    <div className="bg-[#FAF9F6] overflow-x-hidden">
+    <div className="bg-[#FAF9F6] overflow-x-clip">
       {/* Hero Section */}
       <section className="relative h-auto min-h-[600px] lg:h-[600px] flex items-end pb-12 lg:pb-16 justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -200,7 +198,7 @@ export default function Home() {
             initial={{ scale: 1.15 }}
             animate={{ scale: 1.05 }}
             transition={{ duration: 2, ease: 'easeOut' }}
-            src="/images/Banner/Image.jpg.jpeg"
+            src="/images/Banner/Image.webp"
             alt=""
             fetchPriority="high"
             width={1920}
@@ -219,8 +217,12 @@ export default function Home() {
             className="w-full"
           >
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-semibold mb-6 drop-shadow-md">
-              Luxury Hospitality &amp; Unforgettable Experiences
+                Hotels in Jim Corbett &amp; Stays Across India
             </h1>
+
+            <p className="text-md sm:text-base mb-3 text-white/90 max-w-2xl drop-shadow-md">
+              Comfortable hotels and private pool villas in Jim Corbett, Manali, Goa, Jaipur, Rishikesh, Bhimtal and Dehradun.
+            </p>
 
             <div className="flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar mb-0 max-w-max">
               {[{ name: 'Hotel', icon: Building2 }].map((tab) => {
@@ -483,11 +485,10 @@ export default function Home() {
         </div>
       </section>
 
-      <ArchDivider />
+      <SectionDivider variant="arch" />
 
       {/* Welcome Section */}
       {/* TODO: client verify homepage property and location claims in this welcome copy. */}
-      <Section>
       <section className="py-10 px-4 md:px-12 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -496,12 +497,10 @@ export default function Home() {
           variants={fadeInUp}
           className="max-w-5xl mx-auto text-center"
         >
-          <SectionTitle subtitle="Welcome to Royalty" title="More Than Travel. We Create Experiences." />
+          <SectionTitle subtitle="Welcome to VICOH" title="Stays Made for Slowing Down" />
 
           <p className="text-slate-600 mt-5 leading-relaxed max-w-4xl mx-auto">
-            Experience world-class hospitality where coastal charm meets modern sophistication.
-            Nestled atop majestic cliffs, The Grand Horizon offers breathtaking ocean views, private
-            beach access, and handcrafted luxury experiences designed for royalty.
+          Planning a trip to Jim Corbett National Park, a quiet week in the hills, or a beach break in Goa? VICOH Hotel & Resorts has a stay for each. Pick a place, choose your dates, and our team takes care of the rest.
           </p>
 
           <motion.button
@@ -526,17 +525,15 @@ export default function Home() {
             className="w-full max-w-4xl h-[300px] md:h-[400px] object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02]" decoding="async" loading="lazy" width={1200} height={800} />
         </motion.div>
       </section>
-      </Section>
 
-      <ArchDivider />
-      <Section><WhyVibeCollective /></Section>
+      <SectionDivider variant="arch" />
+      <WhyVibeCollective />
 
-      <ArchDivider />
-      <Section><FeaturedHotel hotel={featuredHotel} /></Section>
+      <SectionDivider variant="arch" />
+      <FeaturedHotel hotel={featuredHotel} />
 
       {/* Our Hotels Grid */}
-      <ArchDivider />
-      <Section>
+      <SectionDivider variant="doors" />
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -544,7 +541,7 @@ export default function Home() {
           viewport={{ once: true, margin: '-50px' }}
           variants={fadeInUp}
         >
-          <SectionTitle subtitle="Our Properties" title="Discover Our Hotels" />
+          <SectionTitle subtitle="Our Properties" title="Hotels & Villas Across India" paragraph="From wildlife trips to beach holidays, find a stay in the destination you love." />
         </motion.div>
 
         <motion.div
@@ -610,13 +607,11 @@ export default function Home() {
           ))}
         </motion.div>
       </section>
-      </Section>
 
-      <ArchDivider />
-      <Section><DiningExperience /></Section>
+      <SectionDivider variant="doors" />
+      <DiningExperience />
 
-      <ArchDivider />
-      <Section>
+      <SectionDivider variant="cloche" />
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -624,7 +619,8 @@ export default function Home() {
           viewport={{ once: true, margin: '-50px' }}
           variants={fadeInUp}
         >
-          <SectionTitle subtitle="Weddings" title="Timeless Celebrations, Beautifully Crafted" />
+          <SectionTitle subtitle="Weddings & Conferences" title="Celebrations and Meetings, All in One Place" paragraph="Whether it’s a family wedding or a team conference, we host events at all seven of our destinations. [Venue capacity, seating setups, services included]" />
+          
         </motion.div>
 
         <motion.div
@@ -666,11 +662,9 @@ export default function Home() {
           ))}
         </motion.div>
       </section>
-      </Section>
 
       {/* Gallery Section */}
-      <ArchDivider />
-      <Section>
+      <SectionDivider variant="bloom" />
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -729,16 +723,15 @@ export default function Home() {
           </div>
         )}
       </section>
-      </Section>
 
-      <ArchDivider />
-      <Section><Testimonials /></Section>
+      <SectionDivider variant="arch" />
+      <Testimonials />
         
-      <ArchDivider />
-      <Section><FAQSection title='Hotel FAQs' data={HotelFaqData} /></Section>
+      <SectionDivider variant="arch" />
+      <FAQSection title='Hotel FAQs' data={HotelFaqData} />
 
-      <ArchDivider />
-      <Section><LocationMap /></Section>
+      <SectionDivider variant="arch" />
+      <LocationMap />
     </div>
   );
 }

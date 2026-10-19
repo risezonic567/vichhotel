@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 
 import { conferenceData } from "../data/hospitalityData";
+import Reveal from "../components/Reveal";
+import SectionDivider from "../components/SectionDivider";
 
 const ConferenceDetails = () => {
   const { slug } = useParams();
@@ -54,7 +56,7 @@ const ConferenceDetails = () => {
         <img
           src={conference.image}
           alt={conference.name}
-          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="eager" fetchPriority="high" width={1200} height={800} />
 
         <div className="absolute inset-0 bg-black/50" />
 
@@ -82,7 +84,8 @@ const ConferenceDetails = () => {
       </section>
 
       {/* INTRO */}
-      <section className="py-20 px-6 md:px-12">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 px-6 md:px-12">
 
         <div className="max-w-7xl mx-auto">
 
@@ -157,10 +160,11 @@ const ConferenceDetails = () => {
 
         </div>
 
-      </section>
+      </Reveal>
 
       {/* SEATING */}
-      <section className="py-20 px-6 md:px-12 bg-white">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 px-6 md:px-12 bg-white">
 
         <div className="max-w-7xl mx-auto">
 
@@ -175,8 +179,8 @@ const ConferenceDetails = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
             {conference.seating.map((item, index) => (
+              <Reveal key={index} variant="arch" delay={index * 0.12}>
               <div
-                key={index}
                 className="border border-[#D4AF37]/20 p-6"
               >
                 <Users className="w-5 h-5 text-[#D4AF37] mb-5" />
@@ -185,16 +189,18 @@ const ConferenceDetails = () => {
                   {item}
                 </p>
               </div>
+              </Reveal>
             ))}
 
           </div>
 
         </div>
 
-      </section>
+      </Reveal>
 
       {/* FACILITIES */}
-      <section className="py-20 px-6 md:px-12">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 px-6 md:px-12">
 
         <div className="max-w-7xl mx-auto">
 
@@ -209,8 +215,8 @@ const ConferenceDetails = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
 
             {conference.facilities.map((item, index) => (
+              <Reveal key={index} variant="arch" delay={index * 0.12}>
               <div
-                key={index}
                 className="border border-[#D4AF37]/20 p-6"
               >
 
@@ -221,16 +227,18 @@ const ConferenceDetails = () => {
                 </p>
 
               </div>
+              </Reveal>
             ))}
 
           </div>
 
         </div>
 
-      </section>
+      </Reveal>
 
       {/* SUITABLE FOR */}
-      <section className="py-20 px-6 md:px-12 bg-[#1C1C1C] text-white">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 px-6 md:px-12 bg-[#1C1C1C] text-white">
 
         <div className="max-w-7xl mx-auto">
 
@@ -245,22 +253,24 @@ const ConferenceDetails = () => {
           <div className="flex flex-wrap gap-4">
 
             {conference.suitableFor.map((item, index) => (
+              <Reveal as="span" key={index} variant="arch" delay={index * 0.12}>
               <span
-                key={index}
                 className="border border-[#D4AF37]/40 px-5 py-3 text-sm text-white/80"
               >
                 {item}
               </span>
+              </Reveal>
             ))}
 
           </div>
 
         </div>
 
-      </section>
+      </Reveal>
 
       {/* CTA */}
-      <section className="py-24 px-6 md:px-12 text-center">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-24 px-6 md:px-12 text-center">
 
         <div className="max-w-3xl mx-auto">
 
@@ -286,7 +296,7 @@ const ConferenceDetails = () => {
 
         </div>
 
-      </section>
+      </Reveal>
 
     </main>
   );

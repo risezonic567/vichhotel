@@ -13,6 +13,8 @@ import {
 import FAQSection from "../components/FAQSection";
 import { HotelFaqData } from "../data/faqData";
 import { getCloudinaryImageUrl } from "../utils/cloudinaryImage";
+import Reveal from "../components/Reveal";
+import SectionDivider from "../components/SectionDivider";
 
 export default function Hotel() {
   return (
@@ -23,11 +25,11 @@ export default function Hotel() {
           className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
-              "url('/images/Banner/Vicoh Our hotel banner.jpg.jpeg')",
+              "url('/images/Banner/Vicoh Our hotel banner.webp')",
           }}
         >
         {/* <img
-          src="/images/Banner/Vicoh Our hotel banner.jpg.jpeg"
+          src="/images/Banner/Vicoh Our hotel banner.webp"
           alt="Vicoh Hotels"
           className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} /> */}
 
@@ -51,7 +53,8 @@ export default function Hotel() {
       </section>
 
       {/* ================= COLLECTION INTRO ================= */}
-      <section className="py-20 px-6 md:px-12">
+      <SectionDivider variant="doors" />
+      <Reveal as="section" variant="doors" className="py-20 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Issue #3 Fixed: Sentence case / tracking fix */}
           <p className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-semibold mb-3">
@@ -69,10 +72,11 @@ export default function Hotel() {
             character and exceptional hospitality.
           </p>
         </div>
-      </section>
+      </Reveal>
 
       {/* ================= HOTELS GRID ================= */}
-      <section className="pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+      <SectionDivider variant="doors" />
+      <Reveal as="section" variant="doors" className="pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         <SectionTitle
           subtitle="Our Properties"
           title="Discover Our Hotels"
@@ -80,10 +84,10 @@ export default function Hotel() {
 
         {/* Issue #8 Fixed: Grid alignment fix on 2-column viewports */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {ourHotelsData.slice(1, 4).map((hotel) => (
+          {ourHotelsData.slice(1, 4).map((hotel, index) => (
+            <Reveal key={hotel.id} variant="arch" delay={index * 0.12} className="sm:last:col-span-2 sm:last:max-w-md sm:last:mx-auto lg:last:col-span-1 lg:last:max-w-none">
             <div
-              key={hotel.id}
-              className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:last:col-span-2 sm:last:max-w-md sm:last:mx-auto lg:last:col-span-1 lg:last:max-w-none"
+              className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
             >
               <div className="h-72 overflow-hidden relative">
                 <img
@@ -190,10 +194,12 @@ export default function Hotel() {
                 </div>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
-      </section>
-      <section className="py-20 px-6 md:px-12 bg-white">
+      </Reveal>
+      <SectionDivider variant="doors" />
+      <Reveal as="section" variant="arch" className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionTitle
             subtitle="The Vicoh Difference"
@@ -202,6 +208,7 @@ export default function Hotel() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {/* Issue #9 Fixed: Added min-h-[3rem] for equal height heading alignment */}
+            <Reveal variant="arch" delay={0}>
             <div className="text-center border border-[#E5DCC3] p-8 flex flex-col items-center">
               <BedDouble className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />
               <h3 className="font-serif text-xl mb-3 min-h-[3rem] flex items-center justify-center text-[#1C1C1C]">
@@ -212,7 +219,9 @@ export default function Hotel() {
                 comfort, privacy and effortless relaxation.
               </p>
             </div>
+            </Reveal>
 
+            <Reveal variant="arch" delay={0.12}>
             <div className="text-center border border-[#E5DCC3] p-8 flex flex-col items-center">
               <UtensilsCrossed className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />
               <h3 className="font-serif text-xl mb-3 min-h-[3rem] flex items-center justify-center text-[#1C1C1C]">
@@ -223,7 +232,9 @@ export default function Hotel() {
                 by local flavours and global cuisine.
               </p>
             </div>
+            </Reveal>
 
+            <Reveal variant="arch" delay={0.24}>
             <div className="text-center border border-[#E5DCC3] p-8 flex flex-col items-center">
               <Sparkles className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />
               <h3 className="font-serif text-xl mb-3 min-h-[3rem] flex items-center justify-center text-[#1C1C1C]">
@@ -234,12 +245,14 @@ export default function Hotel() {
                 around every guest and every occasion.
               </p>
             </div>
+            </Reveal>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* ================= WEDDINGS & EVENTS ================= */}
-      <section className="py-24 px-6 md:px-12 bg-[#FAF9F6] text-[#1C1C1C]">
+      <SectionDivider variant="arch" />
+      <Reveal as="section" variant="bloom" className="py-24 px-6 md:px-12 bg-[#FAF9F6] text-[#1C1C1C]">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-semibold mb-4">
             Weddings & Events
@@ -272,10 +285,11 @@ export default function Hotel() {
             </Link>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* ================= FIND YOUR VICOH & FAQ ================= */}
-      <section className="py-20 px-6 md:px-12 bg-white">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="doors" className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <p className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-semibold mb-3">
             Your Next Stay
@@ -299,8 +313,9 @@ export default function Hotel() {
           </Link>
         </div>
 
+        <SectionDivider variant="doors" />
         <FAQSection title="Hotel FAQs" data={HotelFaqData} />
-      </section>
+      </Reveal>
 
     </div>
   );

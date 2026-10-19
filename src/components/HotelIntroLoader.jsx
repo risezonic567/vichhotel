@@ -15,24 +15,24 @@ const HotelIntroLoader = ({ onComplete }) => {
 
     const timer1 = setTimeout(() => {
       setStage(1);
-    }, 200);
+    }, 100);
 
     const timer2 = setTimeout(() => {
       setStage(2);
-    }, 500);
+    }, 220);
 
     const timer3 = setTimeout(() => {
       setStage(3);
-    }, 800);
+    }, 340);
 
     const fadeOutTimer = setTimeout(() => {
       setIsFadingOut(true);
-    }, 1200);
+    }, 450);
 
     const completeTimer = setTimeout(() => {
       document.body.style.overflow = '';
       if (onComplete) onComplete();
-    }, 1600);
+    }, 750);
 
     return () => {
       clearTimeout(timer1);
@@ -46,14 +46,14 @@ const HotelIntroLoader = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-neutral-950 transition-opacity duration-700 ease-in-out ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-neutral-950 transition-opacity duration-300 ease-in-out ${
         isFadingOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
   
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2000"
+          src="/images/Banner/Image.webp"
           alt=""
           className="h-full w-full object-cover animate-bg-zoom filter brightness-50 contrast-125" decoding="async" width={1200} height={800} />
 

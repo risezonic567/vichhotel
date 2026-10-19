@@ -11,18 +11,20 @@ import {
 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import { getCloudinaryImageUrl } from "../utils/cloudinaryImage";
+import Reveal from "./Reveal";
+import { themeFor } from "../config/sectionThemes";
 
 export default function FeaturedHotel({ hotel }) {
     
   if (!hotel) return null;
 
   return (
-    <section className="bg-[#FAF9F6] py-16 md:py-24">
+    <Reveal as="section" variant={themeFor("Featured Hotel")} className="bg-[#FAF9F6] py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         <SectionTitle
           subtitle="Featured Hotel"
-          title="A Stay Designed to Be Remembered."
+          title="A Piece of Goa’s Past, Made Comfortable"
         />
 
         {/* Hotel Card */}
@@ -208,6 +210,6 @@ export default function FeaturedHotel({ hotel }) {
           </div>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

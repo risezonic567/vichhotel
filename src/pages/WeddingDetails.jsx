@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   MapPin,
@@ -12,6 +12,8 @@ import {
   ConciergeBell,
 } from "lucide-react";
 import { weddingsData } from "../data/hospitalityData";
+import Reveal from "../components/Reveal";
+import SectionDivider from "../components/SectionDivider";
 
 const WeddingDetails = () => {
   const { slug } = useParams();
@@ -76,7 +78,7 @@ const WeddingDetails = () => {
         <img
           src={w.heroImage}
           alt={w.title}
-          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="eager" fetchPriority="high" width={1200} height={800} />
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/45" />
@@ -111,7 +113,8 @@ const WeddingDetails = () => {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 px-6">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 md:py-28 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <span className="text-[#B8941F] text-xs uppercase tracking-[0.3em] font-semibold">
             The Experience
@@ -127,10 +130,12 @@ const WeddingDetails = () => {
             {w.overview}
           </p>
         </div>
-      </section>
+      </Reveal>
 
       {w.features?.length > 0 && (
-        <section className="bg-white py-20 md:py-24 px-6">
+        <>
+        <SectionDivider variant="bloom" />
+        <Reveal as="section" variant="bloom" className="bg-white py-20 md:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
               <span className="text-[#B8941F] text-xs uppercase tracking-[0.3em] font-semibold">
@@ -144,8 +149,8 @@ const WeddingDetails = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {w.features.map((feature, index) => (
+                <Reveal key={index} variant="arch" delay={index * 0.12}>
                 <div
-                  key={index}
                   className="group border border-[#E5DCC3] p-8 md:p-10 text-center hover:bg-[#FAF9F6] transition-all duration-300"
                 >
                   <div className="w-12 h-12 mx-auto mb-6 rounded-full border border-[#D4AF37] flex items-center justify-center">
@@ -164,14 +169,18 @@ const WeddingDetails = () => {
                     celebration into an unforgettable experience.
                   </p>
                 </div>
+                </Reveal>
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
+        </>
       )}
 
       {w.details && (
-        <section className="py-20 md:py-28 px-6">
+        <>
+        <SectionDivider variant="bloom" />
+        <Reveal as="section" variant="bloom" className="py-20 md:py-28 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
               {/* Left */}
@@ -209,10 +218,8 @@ const WeddingDetails = () => {
                   if (!item.value) return null;
 
                   return (
-                    <div
-                      key={index}
-                      className="p-7 md:p-8 border-r border-b border-[#E5DCC3] bg-white"
-                    >
+                    <Reveal key={index} variant="arch" delay={index * 0.12}>
+                    <div className="p-7 md:p-8 border-r border-b border-[#E5DCC3] bg-white">
                       <Icon
                         size={22}
                         strokeWidth={1.5}
@@ -227,15 +234,18 @@ const WeddingDetails = () => {
                         {item.value}
                       </p>
                     </div>
+                    </Reveal>
                   );
                 })}
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
+        </>
       )}
 
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="relative py-24 md:py-32 overflow-hidden">
         <img
           src={w.heroImage}
           alt=""
@@ -267,7 +277,7 @@ const WeddingDetails = () => {
             Enquire Now
           </button>
         </div>
-      </section>
+      </Reveal>
     </main>
   );
 };

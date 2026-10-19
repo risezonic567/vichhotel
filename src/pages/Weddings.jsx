@@ -13,6 +13,8 @@ import { weddingsData } from "../data/hospitalityData";
 import SectionTitle from "../components/SectionTitle";
 import FAQSection from "../components/FAQSection";
 import { WeddingFaqData } from "../data/faqData";
+import Reveal from "../components/Reveal";
+import SectionDivider from "../components/SectionDivider";
 
 const Weddings = () => {
   return (
@@ -21,12 +23,12 @@ const Weddings = () => {
           className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
-              "url('/images/Banner/Vicoh Wedding banner.jpg.jpeg')",
+              "url('/images/Banner/Vicoh Wedding banner.webp')",
           }}
         >
 
         {/* <img
-          src="/images/Banner/Vicoh Wedding banner.jpg.jpeg"
+          src="/images/Banner/Vicoh Wedding banner.webp"
           alt="Vicoh Hotels"
           className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} /> */}
 
@@ -51,7 +53,8 @@ const Weddings = () => {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 px-6 md:px-12">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <span className="text-[#D4AF37] text-xs uppercase tracking-[0.25em] font-semibold">
             Destination Weddings
@@ -69,9 +72,10 @@ const Weddings = () => {
               exceptional hospitality and beautiful settings.
           </p>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="pb-24 px-6 md:px-12">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="pb-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <SectionTitle
             subtitle="Our Wedding Destinations"
@@ -80,8 +84,8 @@ const Weddings = () => {
 
           <div className="mt-16 space-y-20">
             {weddingsData.map((wedding, index) => (
+              <Reveal key={wedding.id} variant="arch" delay={index * 0.12}>
               <div
-                key={wedding.id}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
                   index % 2 !== 0 ? "lg:flex-row-reverse" : ""
                 }`}
@@ -165,12 +169,14 @@ const Weddings = () => {
                   </Link>
                 </div>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="bg-[#1C1C1C] text-white py-24 px-6 md:px-12">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="bg-[#1C1C1C] text-white py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <SectionTitle
             subtitle="The Vicoh Wedding Experience"
@@ -204,8 +210,8 @@ const Weddings = () => {
               const Icon = item.icon;
 
               return (
+                <Reveal key={index} variant="arch" delay={index * 0.12}>
                 <div
-                  key={index}
                   className="border border-white/10 p-7 hover:border-[#D4AF37]/60 transition-colors"
                 >
                   <Icon
@@ -222,13 +228,15 @@ const Weddings = () => {
                     {item.text}
                   </p>
                 </div>
+                </Reveal>
               );
             })}
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="py-24 px-6 md:px-12 text-center">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-24 px-6 md:px-12 text-center">
         <div className="max-w-3xl mx-auto">
           <span className="text-[#D4AF37] text-xs uppercase tracking-[0.25em] font-semibold">
             Begin Your Celebration
@@ -252,8 +260,9 @@ const Weddings = () => {
           </Link>
         </div>
 
+        <SectionDivider variant="bloom" />
         <FAQSection title="Wedding FAQs" data={WeddingFaqData} />
-      </section>
+      </Reveal>
     </div>
   );
 };

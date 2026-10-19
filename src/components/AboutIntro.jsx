@@ -1,10 +1,14 @@
 import React from 'react'
 import SectionTitle from '../components/SectionTitle';
 import WhyVibeCollective from '../components/home/WhyVibeCollective';
+import Reveal from './Reveal';
+import SectionDivider from './SectionDivider';
+import { themeFor } from '../config/sectionThemes';
 
 export default function AboutIntro() {
   return (
-     <div className="bg-[#FAF9F6] pt-10 pb-24">
+     <>
+     <Reveal variant={themeFor("Our Story")} as="div" className="bg-[#FAF9F6] pt-10 pb-24">
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <SectionTitle subtitle="Our Essence" title="Creating Journeys, Celebrations & Experiences Worth Remembering." />
       <div className="mt-16 space-y-24">
@@ -22,7 +26,9 @@ export default function AboutIntro() {
         </div>
       </div>
     </div>
-    <WhyVibeCollective/>
-  </div>
+  </Reveal>
+  <SectionDivider variant="arch" />
+  <WhyVibeCollective />
+  </>
   )
 }

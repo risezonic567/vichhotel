@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @layer base {
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   :where(a, button, input, select, textarea):focus-visible {
     outline: 3px solid #D4AF37;
     outline-offset: 3px;

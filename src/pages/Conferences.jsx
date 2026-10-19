@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import FAQSection from "../components/FAQSection";
 import { ConferencesFaqData } from "../data/faqData";
+import Reveal from "../components/Reveal";
+import SectionDivider from "../components/SectionDivider";
 
 export default function Conferences() {
   return (
@@ -21,11 +23,11 @@ export default function Conferences() {
           className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
-              "url('/images/Banner/Vicoh Confrence banner.jpg.jpeg')",
+              "url('/images/Banner/Vicoh Confrence banner.webp')",
           }}
         >
         {/* <img
-          src="/images/Banner/Vicoh Confrence banner.jpg.jpeg"
+          src="/images/Banner/Vicoh Confrence banner.webp"
           alt="Vicoh Conference Venues"
           className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} /> */}
 
@@ -50,7 +52,8 @@ export default function Conferences() {
         </div>
       </section>
 
-      <section className="py-20 px-6 md:px-12">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 px-6 md:px-12">
 
         <div className="max-w-4xl mx-auto text-center">
 
@@ -70,9 +73,10 @@ export default function Conferences() {
 
         </div>
 
-      </section>
+      </Reveal>
 
-      <section className="pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="pb-24 px-6 md:px-12 max-w-7xl mx-auto">
 
         <SectionTitle
           subtitle="Our Venues"
@@ -83,8 +87,8 @@ export default function Conferences() {
 
           {conferenceData.map((venue, index) => (
 
+            <Reveal key={venue.id} variant="arch" delay={index * 0.12}>
             <div
-              key={venue.id}
               className={`grid grid-cols-1 lg:grid-cols-2 bg-white border border-[#E5DCC3] overflow-hidden ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""
                 }`}
             >
@@ -191,14 +195,16 @@ export default function Conferences() {
               </div>
 
             </div>
+            </Reveal>
 
           ))}
 
         </div>
 
-      </section>
+      </Reveal>
 
-      <section className="py-20 px-6 md:px-12 bg-white">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-20 px-6 md:px-12 bg-white">
 
         <div className="max-w-7xl mx-auto">
 
@@ -220,8 +226,8 @@ export default function Conferences() {
               "Dedicated Concierge",
             ].map((facility, index) => (
 
+              <Reveal key={index} variant="arch" delay={index * 0.12}>
               <div
-                key={index}
                 className="border border-[#E5DCC3] p-6"
               >
 
@@ -232,6 +238,7 @@ export default function Conferences() {
                 </p>
 
               </div>
+              </Reveal>
 
             ))}
 
@@ -239,10 +246,11 @@ export default function Conferences() {
 
         </div>
 
-      </section>
+      </Reveal>
 
 
-      <section className="py-24 px-6 md:px-12">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-24 px-6 md:px-12">
 
         <div className="max-w-5xl mx-auto text-center">
 
@@ -263,8 +271,8 @@ export default function Conferences() {
               "Executive Retreats",
             ].map((event, index) => (
 
+              <Reveal key={index} variant="arch" delay={index * 0.12}>
               <div
-                key={index}
                 className="border border-[#E5DCC3] bg-white p-6"
               >
 
@@ -275,6 +283,7 @@ export default function Conferences() {
                 </p>
 
               </div>
+              </Reveal>
 
             ))}
 
@@ -282,10 +291,11 @@ export default function Conferences() {
 
         </div>
 
-      </section>
+      </Reveal>
 
 
-      <section className="py-24 px-6 md:px-12 bg-white text-[#1C1C1C]">
+      <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-24 px-6 md:px-12 bg-white text-[#1C1C1C]">
 
         <div className="max-w-4xl mx-auto text-center">
 
@@ -312,9 +322,10 @@ export default function Conferences() {
 
         </div>
             
+            <SectionDivider variant="bloom" />
             <FAQSection title="Conference FAQs" data={ConferencesFaqData}/>
 
-      </section>
+      </Reveal>
 
     </div>
   );

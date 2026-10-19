@@ -5,7 +5,6 @@ import { Link, useParams } from "react-router-dom";
 import {
   ArrowLeft,
   Check,
-  Clock,
   Mail,
   Phone,
   MapPin,
@@ -13,6 +12,8 @@ import {
 
 import { ourHotelsData } from "../data/hospitalityData";
 import { getCloudinaryImageUrl } from "../utils/cloudinaryImage";
+import Reveal from "../components/Reveal";
+import SectionDivider from "../components/SectionDivider";
 
 
 const HotelDetails = () => {
@@ -25,7 +26,7 @@ const HotelDetails = () => {
     (item) => item.slug === slug
   );
 
-  useEffect(() => {jii
+  useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "instant",
@@ -82,7 +83,8 @@ const HotelDetails = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 md:px-12">
+      <SectionDivider variant="doors" />
+      <Reveal as="section" variant="doors" className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
 
           <Link
@@ -151,7 +153,7 @@ const HotelDetails = () => {
 
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* <section className="px-6 md:px-12 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -171,7 +173,8 @@ const HotelDetails = () => {
         </div>
       </section> */}
 
-      <section className="px-6 md:px-12 pb-20">
+      <SectionDivider variant="doors" />
+      <Reveal as="section" variant="arch" className="px-6 md:px-12 pb-20">
         <div className="max-w-7xl mx-auto">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -186,8 +189,8 @@ const HotelDetails = () => {
               //   className="w-full h-[300px] object-cover"
               // decoding="async" loading="lazy" width={1200} height={800} />
 
+                <Reveal key={index} variant="arch" delay={index * 0.12}>
                 <LazyLoadImage
-                key={index}
                 src={getCloudinaryImageUrl(image, 900)}
                 alt={`${hotel.name} ${index + 1}`}
                 effect="blue"
@@ -196,6 +199,7 @@ const HotelDetails = () => {
                 decoding="async"
                
                 />
+                </Reveal>
 
             ))}
           </div>
@@ -212,9 +216,10 @@ const HotelDetails = () => {
           )}
 
         </div>
-      </section>
+      </Reveal>
 
-      <section className="py-20 px-6 md:px-12 bg-white">
+      <SectionDivider variant="arch" />
+      <Reveal as="section" variant="doors" className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
 
           <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4">
@@ -228,8 +233,8 @@ const HotelDetails = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
 
             {hotel.amenities.map((item, index) => (
+              <Reveal key={index} variant="arch" delay={index * 0.12}>
               <div
-                key={index}
                 className="border border-[#D4AF37]/20 p-6"
               >
                 <Check className="w-5 h-5 text-[#D4AF37] mb-4" />
@@ -238,14 +243,16 @@ const HotelDetails = () => {
                   {item}
                 </p>
               </div>
+              </Reveal>
             ))}
 
           </div>
 
         </div>
-      </section>
+      </Reveal>
 
-      <section className="py-20 px-6 md:px-12">
+      <SectionDivider variant="doors" />
+      <Reveal as="section" variant="cloche" className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
 
           <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4">
@@ -259,8 +266,8 @@ const HotelDetails = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
             {hotel.dining.map((item, index) => (
+              <Reveal key={index} variant="arch" delay={index * 0.12}>
               <div
-                key={index}
                 className="border border-[#D4AF37]/20 p-7"
               >
                 <h3 className="font-serif text-xl mb-3">
@@ -272,14 +279,16 @@ const HotelDetails = () => {
                   designed for memorable moments.
                 </p>
               </div>
+              </Reveal>
             ))}
 
           </div>
 
         </div>
-      </section>
+      </Reveal>
 
-      <section className="py-20 px-6 md:px-12 bg-[#1C1C1C] text-white">
+      <SectionDivider variant="cloche" />
+      <Reveal as="section" variant="doors" className="py-20 px-6 md:px-12 bg-[#1C1C1C] text-white">
         <div className="max-w-7xl mx-auto">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -329,7 +338,7 @@ const HotelDetails = () => {
           </div>
 
         </div>
-      </section>
+      </Reveal>
 
    
 

@@ -5,9 +5,9 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const location = useLocation();
+  const [openMenuLocationKey, setOpenMenuLocationKey] = useState(null);
+  const mobileMenuOpen = openMenuLocationKey === location.key;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,10 +21,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location.pathname]);
 
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
@@ -107,7 +103,7 @@ const Navbar = () => {
 
           <button
             type="button"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            onClick={() => setOpenMenuLocationKey((current) => current === location.key ? null : location.key)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
             className="md:hidden flex items-center justify-center w-10 h-10 text-[#1C1C1C] rounded focus:ring-1 focus:ring-[#D4AF37]"
@@ -171,7 +167,7 @@ const Navbar = () => {
                     >
                       <Link
                         to={link.path}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={() => setOpenMenuLocationKey(null)}
                         className={`flex items-center justify-between py-4 border-b border-white/10 text-xs sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] transition-colors duration-300 ${
                           isActive
                             ? "text-[#D4AF37]"

@@ -8,6 +8,8 @@ import {
   CalendarDays,
   Gift,
 } from "lucide-react";
+import Reveal from "../components/Reveal";
+import SectionDivider from "../components/SectionDivider";
 
 // TODO: client verify that these offers and benefits are currently available.
 const offersData = [
@@ -62,9 +64,9 @@ const Offers = () => {
        <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden">
 
         <img
-          src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=2000&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=75&w=1400&auto=format&fit=crop"
           alt="Vicoh Hotels"
-          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="eager" fetchPriority="high" width={1200} height={800} />
 
         <div className="absolute inset-0 bg-black/50" />
 
@@ -89,7 +91,8 @@ const Offers = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6 md:px-12">
+      <SectionDivider variant="arch" />
+      <Reveal as="section" variant="arch" className="py-20 px-6 md:px-12">
         <div className="max-w-3xl mx-auto text-center">
           <span className="text-[#D4AF37] text-xs uppercase tracking-[0.25em] font-semibold">
             Curated For You
@@ -105,10 +108,11 @@ const Offers = () => {
             designed around the way you love to travel.
           </p>
         </div>
-      </section>
+      </Reveal>
 
       {/* Featured Offer */}
-      <section className="px-6 md:px-12 pb-24">
+      <SectionDivider variant="arch" />
+      <Reveal as="section" variant="arch" className="px-6 md:px-12 pb-24">
         <div className="max-w-7xl mx-auto relative overflow-hidden bg-[#1C1C1C] text-white">
           <div className="grid grid-cols-1 lg:grid-cols-2">
 
@@ -155,10 +159,11 @@ const Offers = () => {
 
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Offers */}
-      <section className="px-6 md:px-12 pb-24">
+      <SectionDivider variant="arch" />
+      <Reveal as="section" variant="arch" className="px-6 md:px-12 pb-24">
         <div className="max-w-7xl mx-auto">
 
           <div className="text-center mb-14">
@@ -172,9 +177,9 @@ const Offers = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {offersData.slice(1).map((offer) => (
+            {offersData.slice(1).map((offer, index) => (
+              <Reveal key={offer.id} variant="arch" delay={index * 0.12}>
               <article
-                key={offer.id}
                 className="bg-white border border-[#E5DCC3] overflow-hidden group"
               >
                 <div className="h-64 overflow-hidden">
@@ -221,13 +226,15 @@ const Offers = () => {
                   </Link>
                 </div>
               </article>
+              </Reveal>
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Benefits */}
-      <section className="bg-[#E5DCC3]/30 py-20 px-6 md:px-12">
+      <SectionDivider variant="arch" />
+      <Reveal as="section" variant="arch" className="bg-[#E5DCC3]/30 py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
 
           <div className="text-center mb-14">
@@ -292,10 +299,11 @@ const Offers = () => {
 
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* CTA */}
-      <section className="py-24 px-6 md:px-12 text-center">
+      <SectionDivider variant="arch" />
+      <Reveal as="section" variant="arch" className="py-24 px-6 md:px-12 text-center">
         <div className="max-w-3xl mx-auto">
 
           <CalendarDays
@@ -322,7 +330,7 @@ const Offers = () => {
           </Link>
 
         </div>
-      </section>
+      </Reveal>
 
     </div>
   );
