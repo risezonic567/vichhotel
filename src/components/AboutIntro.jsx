@@ -17,7 +17,7 @@ export default function AboutIntro() {
             </p>
           </div>
           <div className="h-96">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop" alt="Our Story" className="w-full h-full object-cover shadow-lg" />
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop" alt="A tranquil hotel spa pool" className="w-full h-full object-cover shadow-lg" decoding="async" loading="lazy" width={1200} height={800} />
           </div>
         </div>
       </div>

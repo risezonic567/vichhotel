@@ -54,8 +54,7 @@ const ConferenceDetails = () => {
         <img
           src={conference.image}
           alt={conference.name}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
 
         <div className="absolute inset-0 bg-black/50" />
 

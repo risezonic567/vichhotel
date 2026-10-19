@@ -52,8 +52,12 @@ export default function FAQSection({
                 }`}
               >
                 <button
+                  id={`faq-trigger-${index}`}
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${index}`}
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between  items-center p-5 sm:p-6 text-left focus:outline-none group"
+                  className="w-full flex justify-between items-center p-5 sm:p-6 text-left group"
                 >
                   <span className={`text-base sm:text-lg font-serif transition-colors duration-200 ${
                     isOpen 
@@ -76,6 +80,9 @@ export default function FAQSection({
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
+                      id={`faq-panel-${index}`}
+                      role="region"
+                      aria-labelledby={`faq-trigger-${index}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}

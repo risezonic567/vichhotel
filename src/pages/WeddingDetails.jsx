@@ -17,8 +17,7 @@ const WeddingDetails = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
 
-  const w =
-    weddingsData.find((wed) => wed.slug === slug) || weddingsData[0];
+  const w = weddingsData.find((wed) => wed.slug === slug);
 
   useEffect(() => {
     window.scrollTo({
@@ -26,6 +25,17 @@ const WeddingDetails = () => {
       behavior: "instant",
     });
   }, [slug]);
+
+  if (!w) {
+    return (
+      <main className="min-h-[60vh] flex items-center justify-center bg-[#FAF9F6] px-6 pt-24 text-center">
+        <div>
+          <h1 className="font-serif text-4xl mb-4">Wedding Not Found</h1>
+          <Link to="/weddings" className="text-[#B8941F] underline underline-offset-4">Back to Weddings</Link>
+        </div>
+      </main>
+    );
+  }
 
   const detailItems = [
     {
@@ -61,13 +71,12 @@ const WeddingDetails = () => {
   ];
 
   return (
-    <main className="bg-[#FAF9F6] text-[#1C1C1C] pt-20">
+    <main className="bg-[#FAF9F6] text-[#1C1C1C]">
       <section className="relative h-[65vh] md:min-h-[600px] overflow-hidden">
         <img
           src={w.heroImage}
           alt={w.title}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/45" />
@@ -230,8 +239,7 @@ const WeddingDetails = () => {
         <img
           src={w.heroImage}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
 
         <div className="absolute inset-0 bg-black/60" />
 

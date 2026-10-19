@@ -25,7 +25,7 @@ const HotelDetails = () => {
     (item) => item.slug === slug
   );
 
-  useEffect(() => {
+  useEffect(() => {jii
     window.scrollTo({
       top: 0,
       behavior: "instant",
@@ -54,13 +54,12 @@ const HotelDetails = () => {
   return (
     <main className="bg-[#FAF9F6] text-[#1C1C1C]">
 
-      <section className="relative md:mt-20 h-[70vh] min-h-[550px]">
+      <section className="relative h-[70vh] min-h-[550px]">
         <img
           src={getCloudinaryImageUrl(hotel.heroImage, 2000)}
           alt={hotel.name}
           className="absolute inset-0 w-full h-full object-cover"
-          fetchPriority="high"
-        />
+          fetchPriority="high" decoding="async" width={2000} height={1200} />
 
         <div className="absolute inset-0 bg-black/45" />
 
@@ -157,15 +156,14 @@ const HotelDetails = () => {
       {/* <section className="px-6 md:px-12 pb-20">
         <div className="max-w-7xl mx-auto">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
 
             {hotel.gallery.map((image, index) => (
               <img
                 key={index}
                 src={image}
                 alt={`${hotel.name} ${index + 1}`}
-                className="w-full h-[300px] object-cover"
-              />
+                className="w-full h-[300px] object-cover" decoding="async" loading="lazy" width={1200} height={800} />
             ))}
 
           </div>
@@ -186,15 +184,17 @@ const HotelDetails = () => {
               //   src={image}
               //   alt={`${hotel.name} ${index + 1}`}
               //   className="w-full h-[300px] object-cover"
-              // />
+              // decoding="async" loading="lazy" width={1200} height={800} />
 
                 <LazyLoadImage
                 key={index}
                 src={getCloudinaryImageUrl(image, 900)}
                 alt={`${hotel.name} ${index + 1}`}
                 effect="blue"
-                className=" w-full  h-[300px] object-cover"
+                className="w-full h-[300px]  object-cover"
                 loading="lazy"
+                decoding="async"
+               
                 />
 
             ))}

@@ -1,3 +1,4 @@
+// TODO: client verify all property policies and service claims before publishing.
 export const HotelFaqData = [
   {
     question: "What are the standard check-in and check-out times?",

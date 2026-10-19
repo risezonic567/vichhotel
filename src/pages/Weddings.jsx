@@ -18,7 +18,7 @@ const Weddings = () => {
   return (
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
         <section
-          className="relative md:h-[550px] min-h-[65vh] md:mt-20 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
+          className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
               "url('/images/Banner/Vicoh Wedding banner.jpg.jpeg')",
@@ -28,8 +28,7 @@ const Weddings = () => {
         {/* <img
           src="/images/Banner/Vicoh Wedding banner.jpg.jpeg"
           alt="Vicoh Hotels"
-          className="absolute inset-0 w-full h-full object-cover"
-        /> */}
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} /> */}
 
         <div className="absolute inset-0 bg-black/25" />
 
@@ -97,8 +96,7 @@ const Weddings = () => {
                     <img
                       src={wedding.heroImage}
                       alt={wedding.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy" width={1200} height={800} />
                   </div>
 
                   <div className="absolute bottom-5 left-5 bg-white px-5 py-4">

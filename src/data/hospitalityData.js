@@ -1,4 +1,5 @@
 // Centralized editable placeholder data for Vibe Collective Hospitality
+// TODO: client verify property/event details, contacts, prices and review claims before publishing.
 export const ourHotelsData = [
   {
     id: 1,
@@ -505,7 +506,7 @@ export const galleryData = [
   },
   {
     url: "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790586451/Gallary.jpg",
-    title: "Mnali Mountain View",
+    title: "Manali Mountain View",
   },
 
   {

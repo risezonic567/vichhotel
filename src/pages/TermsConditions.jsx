@@ -13,6 +13,7 @@ export default function TermsConditions() {
           <h1 className="text-3xl sm:text-4xl font-serif font-medium text-stone-900 mb-2">
             Terms of Service
           </h1>
+          {/* TODO: client verify the publication date and terms text. */}
           <p className="text-stone-500 text-sm">Last updated: 29 October 2026</p>
         </div>
 

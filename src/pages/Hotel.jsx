@@ -20,7 +20,7 @@ export default function Hotel() {
 
       {/* ================= HERO ================= */}
      <section
-          className="relative md:h-[550px] min-h-[65vh] md:mt-20 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
+          className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
               "url('/images/Banner/Vicoh Our hotel banner.jpg.jpeg')",
@@ -29,8 +29,7 @@ export default function Hotel() {
         {/* <img
           src="/images/Banner/Vicoh Our hotel banner.jpg.jpeg"
           alt="Vicoh Hotels"
-          className="absolute inset-0 w-full h-full object-cover"
-        /> */}
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} /> */}
 
         <div className="absolute inset-0 bg-black/25" />
 
@@ -84,15 +83,14 @@ export default function Hotel() {
           {ourHotelsData.slice(1, 4).map((hotel) => (
             <div
               key={hotel.id}
-              className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:last:col-span-2 md:last:max-w-md md:last:mx-auto lg:last:col-span-1 lg:last:max-w-none"
+              className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:last:col-span-2 sm:last:max-w-md sm:last:mx-auto lg:last:col-span-1 lg:last:max-w-none"
             >
               <div className="h-72 overflow-hidden relative">
                 <img
                   src={getCloudinaryImageUrl(hotel.heroImage, 900)}
                   alt={hotel.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
+                  loading="lazy" decoding="async" width={1200} height={800} />
 
                 {/* Issue #4 Fixed: Category label formatting */}
                 <div className="absolute top-4 left-4">
@@ -202,7 +200,7 @@ export default function Hotel() {
             title="More Than a Stay"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {/* Issue #9 Fixed: Added min-h-[3rem] for equal height heading alignment */}
             <div className="text-center border border-[#E5DCC3] p-8 flex flex-col items-center">
               <BedDouble className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />

@@ -35,8 +35,7 @@ export default function FeaturedHotel({ hotel }) {
               src={getCloudinaryImageUrl(hotel.heroImage, 1400)}
               alt={hotel.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              loading="lazy"
-            />
+              loading="lazy" decoding="async" width={1200} height={800} />
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />

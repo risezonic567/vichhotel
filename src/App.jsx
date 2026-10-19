@@ -1,27 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MotionConfig } from 'framer-motion';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Seo from './components/Seo';
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Weddings from './pages/Weddings';
-import WeddingDetails from './pages/WeddingDetails';
-import Contact from './pages/Contact';
-
-import HotelDetails from './pages/HotelDetails';
-import Hotel from './pages/Hotel';
-
-import Conferences from './pages/Conferences';
-import ConferenceDetails from './pages/ConferenceDetails';
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Weddings = lazy(() => import('./pages/Weddings'));
+const WeddingDetails = lazy(() => import('./pages/WeddingDetails'));
+const Contact = lazy(() => import('./pages/Contact'));
+const HotelDetails = lazy(() => import('./pages/HotelDetails'));
+const Hotel = lazy(() => import('./pages/Hotel'));
+const Conferences = lazy(() => import('./pages/Conferences'));
+const ConferenceDetails = lazy(() => import('./pages/ConferenceDetails'));
 
 import HotelIntroLoader from './components/HotelIntroLoader';
-import Offers from './pages/Offers';
-import TermsConditions from './pages/TermsConditions';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import CreditCardAuthForm from './pages/Form';
+const Offers = lazy(() => import('./pages/Offers'));
+const TermsConditions = lazy(() => import('./pages/TermsConditions'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const Dining = lazy(() => import('./pages/Dining'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
   const [showLoader, setShowLoader] = useState(false);
@@ -46,6 +47,8 @@ export default function App() {
 
   return (
     <Router>
+      <MotionConfig reducedMotion="user">
+      <Seo />
       {showLoader && (
         <HotelIntroLoader onComplete={handleLoaderComplete} />
       )}
@@ -57,7 +60,8 @@ export default function App() {
       >
         <ScrollToTop />
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow pt-[80px] md:pt-[92px]">
+          <Suspense fallback={<div className="flex min-h-[40vh] items-center justify-center" role="status" aria-label="Loading page"><span className="h-8 w-8 motion-safe:animate-spin rounded-full border-2 border-[#D4AF37] border-t-transparent" /></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
@@ -78,15 +82,17 @@ export default function App() {
             <Route path='/offers' element={<Offers/>}/>
 
             <Route path="/contact" element={<Contact />} />
+            <Route path="/dining" element={<Dining />} />
 
-            <Route path='terms-conditions' element={<TermsConditions/>}/>
+            <Route path='/terms-conditions' element={<TermsConditions/>}/>
             <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
-            {/* <Route path='/form' element={<CreditCardAuthForm/>}/> */}
-        
+            <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>
+      </MotionConfig>
     </Router>
   );
 }

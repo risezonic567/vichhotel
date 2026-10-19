@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- TODO: replace https://example.com with the production domain. -->
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/about-us</loc></url>
+  <url><loc>https://example.com/our-hotels</loc></url>
+  <url><loc>https://example.com/our-hotels/vicoh-grand-mumbai</loc></url>
+  <url><loc>https://example.com/our-hotels/sparklyn-view-manali</loc></url>
+  <url><loc>https://example.com/our-hotels/cielorra-villas-goa</loc></url>
+  <url><loc>https://example.com/our-hotels/cielorra-villas-assagao</loc></url>
+  <url><loc>https://example.com/conferences</loc></url>
+  <url><loc>https://example.com/conferences/grand-conference-hall</loc></url>
+  <url><loc>https://example.com/conferences/executive-boardroom</loc></url>
+  <url><loc>https://example.com/conferences/vicoh-destination-events-goa</loc></url>
+  <url><loc>https://example.com/weddings</loc></url>
+  <url><loc>https://example.com/weddings/udaipur-destination-wedding</loc></url>
+  <url><loc>https://example.com/weddings/goa-beachfront-wedding</loc></url>
+  <url><loc>https://example.com/weddings/dubai-royal-palace-wedding</loc></url>
+  <url><loc>https://example.com/offers</loc></url>
+  <url><loc>https://example.com/contact</loc></url>
+  <url><loc>https://example.com/dining</loc></url>
+  <url><loc>https://example.com/terms-conditions</loc></url>
+  <url><loc>https://example.com/privacy-policy</loc></url>
+</urlset>

@@ -11,10 +11,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      const nextIsScrolled = window.scrollY > 40;
+      setIsScrolled((current) => current === nextIsScrolled ? current : nextIsScrolled);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -46,33 +47,28 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled
-          ? "py-2.5 border-b border-[#D4AF37]/20 shadow-md"
-          : "py-4 md:py-5"
+          ? "py-1.5 border-b border-[#D4AF37]/20 shadow-md"
+          : "py-2"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12">
-        <div className="flex items-center justify-between h-12 md:h-14">
-
-      
-          <div className="relative flex items-center shrink-0">
-            <Link
-              to="/"
-              aria-label="Vicoh Hotel Home"
-              className="absolute top-1/2 -translate-y-1/2 left-0 focus:outline-none focus:ring-1 focus:ring-[#D4AF37] rounded z-10 transition-transform duration-300 hover:scale-105"
-            >
-              <img
-                src="/images/logo/viccccccooohhhhh.jpg__1_-removebg-preview (1).png"
-                alt="Vicoh Hotel Logo"
-               
-                className={`w-auto object-contain transition-all duration-300 ${
-                  isScrolled 
-                    ? "h-20 md:h-32"  /* Scroll karne par thoda chhota */
-                    : "h-20 md:h-32"  /* Normal state me BADA logo */
-                }`}
-              />
-            </Link>
-            <div className={`transition-all duration-300 ${isScrolled ? "w-28 md:w-36" : "w-32 md:w-44"}`} />
-          </div>
+        <div className="flex items-center justify-between h-16 md:h-[76px]">
+          <Link
+            to="/"
+            aria-label="Vicoh Hotel Home"
+            className="flex items-center shrink-0 transition-transform duration-300 focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded"
+          >
+            <img
+              src="/images/logo/logo.png"
+              alt="Vicoh Hotel logo"
+              decoding="async"
+              width={490}
+              height={552}
+              className={`w-auto object-contain transition-all duration-300 ${
+                isScrolled ? "h-11 md:h-14" : "h-12 md:h-[72px]"
+              }`}
+            />
+          </Link>
 
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => {
@@ -114,7 +110,7 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className="md:hidden flex items-center justify-center w-10 h-10 text-[#1C1C1C] rounded focus:outline-none focus:ring-1 focus:ring-[#D4AF37]"
+            className="md:hidden flex items-center justify-center w-10 h-10 text-[#1C1C1C] rounded focus:ring-1 focus:ring-[#D4AF37]"
           >
             <AnimatePresence mode="wait" initial={false}>
               {mobileMenuOpen ? (

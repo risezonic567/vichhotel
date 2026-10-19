@@ -13,6 +13,7 @@ export default function PrivacyPolicy() {
           <h1 className="text-3xl sm:text-4xl font-serif font-medium text-stone-900 mb-2">
             Privacy Policy
           </h1>
+          {/* TODO: client verify the publication date and policy text. */}
           <p className="text-stone-500 text-sm">Last updated: 29 October 2026</p>
         </div>
 

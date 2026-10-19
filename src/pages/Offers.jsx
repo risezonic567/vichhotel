@@ -9,6 +9,7 @@ import {
   Gift,
 } from "lucide-react";
 
+// TODO: client verify that these offers and benefits are currently available.
 const offersData = [
   {
     id: 1,
@@ -58,13 +59,12 @@ const Offers = () => {
   return (
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
 
-       <section className="relative md:mt-20 min-h-[65vh] flex items-center justify-center overflow-hidden">
+       <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden">
 
         <img
           src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=2000&auto=format&fit=crop"
           alt="Vicoh Hotels"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
 
         <div className="absolute inset-0 bg-black/50" />
 
@@ -116,8 +116,7 @@ const Offers = () => {
               <img
                 src={offersData[0].image}
                 alt={offersData[0].title}
-                className="w-full h-full object-cover"
-              />
+                className="w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} />
             </div>
 
             <div className="p-8 md:p-14 flex flex-col justify-center">
@@ -182,8 +181,7 @@ const Offers = () => {
                   <img
                     src={offer.image}
                     alt={offer.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy" width={1200} height={800} />
                 </div>
 
                 <div className="p-7">

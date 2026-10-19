@@ -5,28 +5,34 @@ const HotelIntroLoader = ({ onComplete }) => {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.body.style.overflow = '';
+      onComplete?.();
+      return undefined;
+    }
+
     document.body.style.overflow = 'hidden';
 
     const timer1 = setTimeout(() => {
       setStage(1);
-    }, 400);
+    }, 200);
 
     const timer2 = setTimeout(() => {
       setStage(2);
-    }, 1200);
+    }, 500);
 
     const timer3 = setTimeout(() => {
       setStage(3);
-    }, 2000);
+    }, 800);
 
     const fadeOutTimer = setTimeout(() => {
       setIsFadingOut(true);
-    }, 3000);
+    }, 1200);
 
     const completeTimer = setTimeout(() => {
       document.body.style.overflow = '';
       if (onComplete) onComplete();
-    }, 3600);
+    }, 1600);
 
     return () => {
       clearTimeout(timer1);
@@ -48,15 +54,21 @@ const HotelIntroLoader = ({ onComplete }) => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2000"
-          alt="Luxury Hotel Ambience"
-          className="h-full w-full object-cover animate-bg-zoom filter brightness-50 contrast-125"
-        />
+          alt=""
+          className="h-full w-full object-cover animate-bg-zoom filter brightness-50 contrast-125" decoding="async" width={1200} height={800} />
 
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-black/60 to-neutral-950/80" />
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center select-none">
+        <button
+          type="button"
+          onClick={() => { document.body.style.overflow = ''; onComplete?.(); }}
+          className="fixed right-5 top-5 z-[10000] rounded border border-amber-100/60 px-4 py-2 text-xs uppercase tracking-widest text-amber-50 hover:bg-white/10"
+        >
+          Skip
+        </button>
         
         <div
           className={`h-[1px] bg-gradient-to-r from-transparent via-amber-200/50 to-transparent transition-all duration-1000 ${

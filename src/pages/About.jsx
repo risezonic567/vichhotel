@@ -12,7 +12,7 @@ export default function About() {
     <>
       <div className="bg-[#FAF9F6]">
         <section
-          className="relative md:h-[550px] min-h-[65vh] md:mt-20 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
+          className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
               "url('/images/Banner/Vicoh About Us banner.jpg.jpeg')",

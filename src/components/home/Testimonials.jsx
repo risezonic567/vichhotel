@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import SectionTitle from '../../components/SectionTitle';
 
+// TODO: client verify testimonial text, names, roles and consent before publishing.
 const testimonials = [
   {
     id: 't-1',

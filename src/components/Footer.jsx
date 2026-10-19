@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, ArrowUp } from "lucide-react";
+import { siteConfig } from "../data/siteConfig";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,18 +18,21 @@ const Footer = () => {
           <Link
             to="/"
             aria-label="Vicoh Hotel Home"
-            className="inline-block focus:outline-none focus:ring-1 focus:ring-[#D4AF37] rounded transition-transform duration-300 hover:scale-105"
+            className="inline-block focus:ring-1 focus:ring-[#D4AF37] rounded transition-transform duration-300 hover:scale-105"
           >
             <img
-              src="/images/logo/viccccccooohhhhh.jpg__1_-removebg-preview (1).png"
-              alt="Vicoh Hotel Logo"
-              className="w-auto h-32 object-contain brightness-110"
+              src="/images/logo/logo.png"
+              alt={`${siteConfig.brandName} logo`}
+              className="h-20 md:h-24 w-auto object-contain brightness-110"
+              decoding="async"
+              width={490}
+              height={552}
             />
           </Link>
 
           <p className="text-sm text-[#FAF9F6]/70 leading-relaxed max-w-sm font-light">
-            An elegant retreat where refined hospitality, timeless comfort, and
-            exceptional experiences come together to create unforgettable stays.
+            Vicoh Hotel welcomes guests to Mumbai with a comfortable place to
+            stay and a convenient base for exploring the city.
           </p>
         </div>
 
@@ -67,28 +71,27 @@ const Footer = () => {
             <li className="flex items-start space-x-3 group">
               <MapPin className="w-4 h-4 text-[#D4AF37] mt-1 shrink-0 group-hover:scale-110 transition-transform" />
               <span className="leading-relaxed">
-                Arabian Sea Road,<br />
-                Mumbai, Maharashtra, India
+                {siteConfig.address}
               </span>
             </li>
 
             <li className="flex items-center space-x-3 group">
               <Mail className="w-4 h-4 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
               <a
-                href="mailto:info.vicoh@gmail.com"
+                href={`mailto:${siteConfig.email}`}
                 className="hover:text-[#D4AF37] transition-colors"
               >
-                info.vicoh@gmail.com
+                {siteConfig.email}
               </a>
             </li>
 
             <li className="flex items-center space-x-3 group">
               <Phone className="w-4 h-4 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
               <a
-                href="tel:+91 92667 30494"
+                href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
                 className="hover:text-[#D4AF37] transition-colors"
               >
-                +91 92667 30494
+                {siteConfig.phone}
               </a>
             </li>
           </ul>
@@ -104,41 +107,17 @@ const Footer = () => {
           </p>
 
           <div className="flex flex-col space-y-2.5 text-sm text-[#FAF9F6]/80">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-between border border-[#D4AF37]/20 px-3.5 py-2 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 rounded-sm"
-            >
-              <span>Instagram</span>
-              <span className="text-xs text-[#D4AF37]">→</span>
-            </a>
-
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-between border border-[#D4AF37]/20 px-3.5 py-2 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 rounded-sm"
-            >
-              <span>Facebook</span>
-              <span className="text-xs text-[#D4AF37]">→</span>
-            </a>
-
-            <a
-              href="https://wa.me/912240000000"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-between border border-[#D4AF37]/20 px-3.5 py-2 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 rounded-sm"
-            >
-              <span>WhatsApp</span>
-              <span className="text-xs text-[#D4AF37]">→</span>
-            </a>
+            {[["Instagram", siteConfig.instagram], ["Facebook", siteConfig.facebook], ["WhatsApp", siteConfig.whatsapp]].filter(([, url]) => url).map(([label, url]) => (
+              <a key={label} href={url} target="_blank" rel="noreferrer" className="inline-flex items-center justify-between border border-[#D4AF37]/20 px-3.5 py-2 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 rounded-sm">
+                <span>{label}</span><span aria-hidden="true" className="text-xs text-[#D4AF37]">→</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-[#FAF9F6]/10 flex flex-col md:flex-row justify-between items-center text-xs text-[#FAF9F6]/60 gap-4">
-        <p>© {currentYear} Vicoh Hotel. All rights reserved.</p>
+        <p>© {currentYear} {siteConfig.brandName}. All rights reserved.</p>
 
         <div className="flex items-center space-x-6">
           <Link to="/privacy-policy" className="hover:text-[#D4AF37] transition-colors">

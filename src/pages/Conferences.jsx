@@ -18,7 +18,7 @@ export default function Conferences() {
     <div className="bg-[#FAF9F6] text-[#1C1C1C]">
 
       <section
-          className="relative md:h-[550px] min-h-[65vh] md:mt-20 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
+          className="relative md:h-[550px] min-h-[65vh] flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
               "url('/images/Banner/Vicoh Confrence banner.jpg.jpeg')",
@@ -27,8 +27,7 @@ export default function Conferences() {
         {/* <img
           src="/images/Banner/Vicoh Confrence banner.jpg.jpeg"
           alt="Vicoh Conference Venues"
-          className="absolute inset-0 w-full h-full object-cover"
-        /> */}
+          className="absolute inset-0 w-full h-full object-cover" decoding="async" loading="lazy" width={1200} height={800} /> */}
 
         <div className="absolute inset-0 bg-black/25" />
 
@@ -95,8 +94,7 @@ export default function Conferences() {
                 <img
                   src={venue.image}
                   alt={venue.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy" width={1200} height={800} />
 
               </div>
 
