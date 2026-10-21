@@ -17,7 +17,7 @@ const whyUsFeatures = [
   {
     icon: <Sparkles className="w-8 h-8 text-[#D4AF37]" />,
     title: "Easy to Reach",
-    desc: " Got a question before you book? Call or message us. We’ll help with dates and details. [+91 92667 30494]"
+    desc: "Got a question before you book? Call or message us. We’ll help with dates and details. [Phone / WhatsApp]"
   }
 ];
 
@@ -28,7 +28,7 @@ const WhyAboutVibeCollective = () => {
         <SectionTitle
           dark
           subtitle="The Vicoh Experience"
-          title="Why Stay With Us"
+          title="Why Choose VICOH Hotel & Resorts"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">

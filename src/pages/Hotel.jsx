@@ -41,13 +41,11 @@ export default function Hotel() {
           </p>
 
           <h1 className="font-serif text-5xl md:text-7xl font-light mb-6">
-            A Collection of Exceptional Stays
+           Hotels & Villas Across India
           </h1>
 
           <p className="text-white text-[20px] max-w-2xl mx-auto leading-relaxed  font-light">
-            Discover distinctive Vicoh properties across India's most
-            inspiring destinations, where refined hospitality meets
-            unforgettable experiences.
+           Seven destinations, from the Himalayan foothills to North Goa. Find the stay that fits your trip.
           </p>
         </div>
       </section>
@@ -62,14 +60,11 @@ export default function Hotel() {
           </p>
 
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-6 text-[#1C1C1C]">
-            Places to Stay. Experiences to Remember.
+           One Brand, Seven Very Different Trips
           </h2>
 
           <p className="text-[#1C1C1C]/70 leading-relaxed text-base sm:text-lg font-light">
-            From vibrant city escapes and serene coastal retreats to
-            majestic mountain destinations and heritage-inspired stays,
-            every Vicoh property is thoughtfully designed around comfort,
-            character and exceptional hospitality.
+           A weekend in Manali and a week in Goa don’t look anything alike, and our stays don’t either. Some are hotels with a view and a restaurant. Others are whole villas with a pool you won’t have to share.What stays the same is the basics. A clean room, honest details on this page, and a real person to call when you need a hand.
           </p>
         </div>
       </Reveal>
@@ -79,11 +74,11 @@ export default function Hotel() {
       <Reveal as="section" variant="doors" className="pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         <SectionTitle
           subtitle="Our Properties"
-          title="Discover Our Hotels"
+          title="Pick Your Destination"
         />
 
         {/* Issue #8 Fixed: Grid alignment fix on 2-column viewports */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div id="properties" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 scroll-mt-24">
           {ourHotelsData.slice(1, 4).map((hotel, index) => (
             <Reveal key={hotel.id} variant="arch" delay={index * 0.12} className="sm:last:col-span-2 sm:last:max-w-md sm:last:mx-auto lg:last:col-span-1 lg:last:max-w-none">
             <div
@@ -198,12 +193,98 @@ export default function Hotel() {
           ))}
         </div>
       </Reveal>
+
+      {/* ================= CHOOSE YOUR STAY ================= */}
+      <SectionDivider variant="arch" />
+      <Reveal
+        as="section"
+        variant="arch"
+        className="bg-[#FAF9F6] px-6 py-20 md:px-12"
+      >
+        <div className="mx-auto max-w-5xl">
+          <SectionTitle
+            subtitle="Not Sure Where to Go?"
+            title="Which Stay Suits Your Trip?"
+          />
+
+          <ul className="grid gap-4 sm:grid-cols-2">
+            <li className="border border-[#E5DCC3] p-5 leading-relaxed text-[#1C1C1C]/80">
+              Safari and wildlife:{' '}
+              <Link
+                to="/our-hotels#properties"
+                className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+              >
+                Jim Corbett
+              </Link>
+              .
+            </li>
+            <li className="border border-[#E5DCC3] p-5 leading-relaxed text-[#1C1C1C]/80">
+              Cool air and mountains:{' '}
+              <Link
+                to="/our-hotels/sparklyn-view-manali"
+                className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+              >
+                Manali
+              </Link>{' '}
+              or{' '}
+              <Link
+                to="/our-hotels#properties"
+                className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+              >
+                Dehradun
+              </Link>
+              .
+            </li>
+            <li className="border border-[#E5DCC3] p-5 leading-relaxed text-[#1C1C1C]/80">
+              A quiet lake:{' '}
+              <Link
+                to="/our-hotels#properties"
+                className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+              >
+                Bhimtal
+              </Link>
+              .
+            </li>
+            <li className="border border-[#E5DCC3] p-5 leading-relaxed text-[#1C1C1C]/80">
+              Yoga and the river:{' '}
+              <Link
+                to="/our-hotels#properties"
+                className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+              >
+                Rishikesh
+              </Link>
+              .
+            </li>
+            <li className="border border-[#E5DCC3] p-5 leading-relaxed text-[#1C1C1C]/80">
+              Forts, palaces and shopping:{' '}
+              <Link
+                to="/our-hotels#properties"
+                className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+              >
+                Jaipur
+              </Link>
+              .
+            </li>
+            <li className="border border-[#E5DCC3] p-5 leading-relaxed text-[#1C1C1C]/80">
+              Beaches and a big group:{' '}
+              <Link
+                to="/our-hotels/cielorra-villas-goa"
+                className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+              >
+                our private pool villas in North Goa
+              </Link>
+              .
+            </li>
+          </ul>
+        </div>
+      </Reveal>
+
       <SectionDivider variant="doors" />
       <Reveal as="section" variant="arch" className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionTitle
             subtitle="The Vicoh Difference"
-            title="More Than a Stay"
+            title="More Than a Room"
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -212,11 +293,12 @@ export default function Hotel() {
             <div className="text-center border border-[#E5DCC3] p-8 flex flex-col items-center">
               <BedDouble className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />
               <h3 className="font-serif text-xl mb-3 min-h-[3rem] flex items-center justify-center text-[#1C1C1C]">
-                Exceptional Stays
+                Stays That Match the Place
               </h3>
               <p className="text-sm text-[#1C1C1C]/70 leading-relaxed font-light">
-                Thoughtfully designed rooms and suites created for
-                comfort, privacy and effortless relaxation.
+                We don’t make every property look the same. A pool villa in
+                Goa and a mountain stay in Manali are built for different
+                trips, so we run them differently.
               </p>
             </div>
             </Reveal>
@@ -225,11 +307,12 @@ export default function Hotel() {
             <div className="text-center border border-[#E5DCC3] p-8 flex flex-col items-center">
               <UtensilsCrossed className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />
               <h3 className="font-serif text-xl mb-3 min-h-[3rem] flex items-center justify-center text-[#1C1C1C]">
-                Curated Dining
+                Food Your Way
               </h3>
               <p className="text-sm text-[#1C1C1C]/70 leading-relaxed font-light">
-                Discover distinctive culinary experiences inspired
-                by local flavours and global cuisine.
+                At our Goa villas, you can book a private chef and a barbecue
+                evening. Other properties serve meals on site, and our team can
+                help with local recommendations.
               </p>
             </div>
             </Reveal>
@@ -238,11 +321,16 @@ export default function Hotel() {
             <div className="text-center border border-[#E5DCC3] p-8 flex flex-col items-center">
               <Sparkles className="w-8 h-8 text-[#D4AF37] mx-auto mb-5" />
               <h3 className="font-serif text-xl mb-3 min-h-[3rem] flex items-center justify-center text-[#1C1C1C]">
-                Personalized Hospitality
+                Someone Picks Up
               </h3>
               <p className="text-sm text-[#1C1C1C]/70 leading-relaxed font-light">
-                Attentive service and thoughtful details designed
-                around every guest and every occasion.
+                Got a question before you book, or a problem during your stay?{' '}
+                <Link
+                  to="/contact"
+                  className="font-medium text-[#1C1C1C] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
+                >
+                  Call or message us. [Phone / WhatsApp]
+                </Link>
               </p>
             </div>
             </Reveal>
@@ -259,13 +347,13 @@ export default function Hotel() {
           </p>
 
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-6">
-            Celebrate Something Extraordinary
+            Planning Something Big?
           </h2>
 
           <p className="text-[#1C1C1C]/70 max-w-2xl mx-auto leading-relaxed mb-10 font-light">
-            From destination weddings to sophisticated conferences
-            and private celebrations, Vicoh creates spaces for
-            moments that deserve to be remembered.
+            Weddings, team offsites, family functions. We host events at all
+            seven destinations. Tell us your dates and guest count, and we’ll
+            show you what works.
           </p>
 
           {/* Issue #6 & #10 Fixed: Standardized button styles using original theme colors */}
@@ -296,12 +384,12 @@ export default function Hotel() {
           </p>
 
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-6">
-            Find Your Vicoh
+            Find Your VICOH
           </h2>
 
           <p className="text-[#1C1C1C]/70 leading-relaxed mb-8 font-light">
-            Choose your destination and discover a stay designed
-            around comfort, character and exceptional hospitality.
+            Tell us your dates, your group size, and what kind of trip you
+            want. We’ll suggest the right place.
           </p>
 
           <Link

@@ -5,6 +5,12 @@ import FeaturedHotel from '../components/Featured';
 
 import { ourHotelsData } from "../data/hospitalityData"
 import SectionDivider from '../components/SectionDivider';
+import OurMissionAndVision from '../components/OurMissionAndVision';
+import WhyAboutVibeCollective from '../components/WhyAboutVibeCollective';
+import WhereYouCanStayWithUs from '../components/WhereYouCanStayWithUs';
+import OurValues from '../components/OurValues';
+import ALookInsideVicoh from '../components/ALookInsideVicoh';
+import OurPromise from '../components/OurPromise';
 
 export default function About() {
   const featuredHotel = ourHotelsData.find(
@@ -38,6 +44,15 @@ export default function About() {
 
         <SectionDivider variant="arch" />
         <AboutIntro />
+
+        <OurMissionAndVision />
+
+        <SectionDivider variant="arch" />
+        <WhyAboutVibeCollective />
+        <WhereYouCanStayWithUs />
+        <OurValues />
+        <ALookInsideVicoh />
+        <OurPromise />
 
         <SectionDivider variant="arch" />
         <FeaturedHotel hotel={featuredHotel} />

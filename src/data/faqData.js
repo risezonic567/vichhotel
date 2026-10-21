@@ -1,5 +1,5 @@
 // TODO: client verify all property policies and service claims before publishing.
-export const HotelFaqData = [
+export const HomeFaqData = [
   {
     question: "Where are VICOH properties located?",
     answer: "We have stays in Jim Corbett, Manali, Goa, Jaipur, Rishikesh, Bhimtal, and Dehradun."
@@ -19,6 +19,37 @@ export const HotelFaqData = [
   {
     question: "How do I book a stay?",
     answer: "Pick your destination on our website, choose your dates, and book online. You can also call us directly.[+91 92667 30494]"
+  }
+];
+
+export const HotelFaqData = [
+  {
+    question: "Where are VICOH properties located?",
+    answer: " We have stays in Jim Corbett, Manali, Goa, Jaipur, Rishikesh, Bhimtal, and Dehradun. In Goa, our villas are in Saligao, Assagao and Anjuna."
+  },
+  {
+    question: "Do your Goa villas have a private pool?",
+    answer: "Yes. Every Cielorra villa has its own private swimming pool."
+  },
+  {
+    question: "How many guests can stay in a villa?",
+    answer: "Our 3-bedroom villas in Assagao and Anjuna host up to 6 guests. The 4-bedroom villa in Saligao hosts up to 10."
+  },
+  {
+    question: "Can I book a private chef?",
+    answer: "Yes, at our Goa villas. A private chef and a barbecue setup are both available on request."
+  },
+  {
+    question: "How do I book or enquire?",
+    answer: " Click Enquire on any property, or call us[+91 92667 30494]"
+  },
+  {
+    question: "What are the check-in and check-out times?",
+    answer: "Our team will confirm timings for your property when you enquire. †"
+  },
+  {
+    question: "What is your cancellation and refund policy?",
+    answer: " Policies can differ by property and season. Please ask our team before you book, and we’ll share the exact terms. "
   }
 ];
 
@@ -43,15 +74,31 @@ export const WeddingFaqData = [
 
 export const ConferencesFaqData = [
   {
-    question: "What audio-visual equipment is included in the conference rooms?",
-    answer: "All conference suites come equipped with high-definition LED displays/projectors, state-of-the-art sound systems, high-speed dedicated bandwidth, and wireless microphones."
+    question: "Where can I hold a conference with VICOH?",
+    answer: "We host events at all seven of our destinations: Jim Corbett, Manali, Goa, Jaipur, Rishikesh, Bhimtal and Dehradun."
   },
   {
-    question: "Do you offer corporate accommodation packages for large delegations?",
-    answer: "Yes, we offer tiered group room block rates, custom dining menus, private executive lounges, and dedicated check-in counters for corporate summit attendees."
+    question: "What is the maximum number of guests?",
+    answer: "It depends on the property and the type of event. Please call us with your guest count, and we’ll tell you which venue fits."
   },
   {
-    question: "Can you accommodate corporate breakout sessions and outdoor networking?",
-    answer: "Our properties feature versatile breakout rooms, boardrooms, and open-air courtyards ideal for workshops, team-building sessions, and evening cocktail receptions."
+    question: "What audio-visual equipment is available?",
+    answer: "Equipment varies by property. Tell us what you need, such as a projector, screen, or microphones, and we’ll confirm for your dates."
+  },
+  {
+    question: "Can guests stay at the same property?",
+    answer: "Yes. Our properties offer rooms, so your group can stay and meet in the same place. We’ll confirm the room count for your dates."
+  },
+  {
+    question: "Can you arrange meals and tea breaks?",
+    answer: "Yes, we can plan meals around your agenda. Menus are confirmed when you enquire."
+  },
+  {
+    question: "How do I book?",
+    answer: "Fill in the enquiry form or call us. Our team will respond with options and next steps. [Phone / WhatsApp]"
+  },
+  {
+    question: "Do you offer packages?",
+    answer: "Packages depend on the venue, dates, and group size. Ask our team for a quote."
   }
 ];

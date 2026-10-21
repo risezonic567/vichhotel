@@ -1,8 +1,6 @@
 import React from 'react'
 import SectionTitle from '../components/SectionTitle';
-import WhyAboutVibeCollective from '../components/WhyAboutVibeCollective';
 import Reveal from './Reveal';
-import SectionDivider from './SectionDivider';
 import { themeFor } from '../config/sectionThemes';
 
 export default function AboutIntro() {
@@ -28,8 +26,6 @@ export default function AboutIntro() {
       </div>
     </div>
   </Reveal>
-  <SectionDivider variant="arch" />
-  <WhyAboutVibeCollective />
   </>
   )
 }

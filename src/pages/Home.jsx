@@ -21,7 +21,7 @@ import FeaturedHotel from '../components/Featured';
 import DiningExperience from '../components/DiningExperience';
 import { getCloudinaryImageUrl } from '../utils/cloudinaryImage';
 import FAQSection from '../components/FAQSection';
-import { HotelFaqData } from '../data/faqData';
+import { HomeFaqData } from '../data/faqData';
 import SectionDivider from '../components/SectionDivider';
 
 // Framer Motion Animation Variants
@@ -246,7 +246,6 @@ export default function Home() {
               })}
             </div>
 
-            {/* Booking Form Bar */}
             <div className="relative bg-white/90 backdrop-blur-md rounded-b-md rounded-tr-md border border-[#D4AF37]/30 shadow-2xl p-4 sm:p-6 lg:p-4">
               <form
                 onSubmit={handleSubmit}
@@ -608,10 +607,12 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <SectionDivider variant="doors" />
-      <DiningExperience />
-
+      {/* <SectionDivider variant="doors" /> */}
       <SectionDivider variant="cloche" />
+
+      <DiningExperience />
+      <SectionDivider variant="bloom" />
+
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -728,7 +729,7 @@ export default function Home() {
       <Testimonials />
         
       <SectionDivider variant="arch" />
-      <FAQSection title='Hotel FAQs' data={HotelFaqData} />
+      <FAQSection title='Hotel FAQs' data={HomeFaqData} />
 
       <SectionDivider variant="arch" />
       <LocationMap />

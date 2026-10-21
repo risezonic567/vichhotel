@@ -7,7 +7,10 @@ const ROUTE_META = {
   '/': ['Vicoh Hotel | Vibe Collective Hospitality', 'Explore Vicoh Hotel stays, events and hospitality experiences.'],
   '/about-us': ['About Us | Vicoh Hotel', 'Learn about Vicoh Hotel and Vibe Collective Hospitality.'],
   '/our-hotels': ['Our Hotels | Vicoh Hotel', 'Explore the properties listed by Vicoh Hotel.'],
-  '/conferences': ['Conferences | Vicoh Hotel', 'Explore conference and event venues listed by Vicoh Hotel.'],
+  '/conferences': [
+    'Conferences & Corporate Events | VICOH Hotel & Resorts',
+    'Plan conferences, corporate offsites, and team events with VICOH in Jim Corbett, Manali, Goa, Jaipur, Rishikesh, Bhimtal, or Dehradun. Call us to discuss your event.',
+  ],
   '/weddings': ['Weddings | Vicoh Hotel', 'Explore wedding destinations listed by Vicoh Hotel.'],
   '/offers': ['Offers | Vicoh Hotel', 'View current Vicoh Hotel offers.'],
   '/contact': ['Contact | Vicoh Hotel', 'Contact Vicoh Hotel with your enquiry.'],
