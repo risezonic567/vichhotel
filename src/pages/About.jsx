@@ -23,16 +23,15 @@ export default function About() {
 
           <div className="relative z-10 text-center text-white max-w-4xl px-6">
             <p className="text-[#D4AF37] uppercase tracking-[0.35em] text-xs mb-5">
-              Meetings & Events
+              About VICOH
             </p>
 
             <h1 className="font-serif text-5xl md:text-7xl font-light mb-6">
-              Spaces Designed to Inspire
+               About VICOH Hotel & Resorts
             </h1>
 
             <p className="text-white max-w-2xl mx-auto text-[20px] leading-7">
-              Sophisticated venues, seamless service and thoughtfully designed spaces
-              for conferences, meetings and memorable corporate gatherings.
+           Hotels and private pool villas, from the Himalayan foothills to North Goa.
             </p>
           </div>
         </section>

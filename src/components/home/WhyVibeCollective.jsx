@@ -17,7 +17,7 @@ const whyUsFeatures = [
   {
     icon: <Sparkles className="w-8 h-8 text-[#D4AF37]" />,
     title: "Easy Booking",
-    desc: "Choose a destination, check your dates, and book on the website or call our team. [Phone / WhatsApp]"
+    desc: "Choose a destination, check your dates, and book on the website or call our team. [+91 92667 30494]"
   }
 ];
 
