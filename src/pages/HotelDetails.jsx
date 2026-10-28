@@ -339,9 +339,6 @@ const HotelDetails = () => {
 
         </div>
       </Reveal>
-
-   
-
     </main>
   );
 };

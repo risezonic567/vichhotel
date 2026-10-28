@@ -55,20 +55,32 @@ export const HotelFaqData = [
 
 export const WeddingFaqData = [
   {
-    question: "Can we customize our destination wedding packages?",
-    answer: "Absolutely. Every wedding is unique. Our dedicated wedding planners tailor catering, floral décor, entertainment, and guest itineraries to match your specific vision."
+    question: "Where can I have a destination wedding with VICOH?",
+    answer: "We host weddings in Goa, Jim Corbett, Manali, Bhimtal, Dehradun, Jaipur, and Rishikesh."
   },
   {
-    question: "What is the maximum guest capacity for wedding venues?",
-    answer: "Our venues range from intimate beachfront settings accommodating 50 guests to expansive grand ballrooms and outdoor courtyards hosting up to 800+ guests."
+    question: "Which destination is best for a wedding?",
+    answer: "It depends on your guests and the mood you want. Goa suits a beach celebration, Manali and Bhimtal suit a hill setting, Jaipur suits a royal feel, and Rishikesh suits a peaceful one. Tell us your plans, and we'll guide you."
   },
   {
-    question: "Do you provide dedicated wedding coordinators on-site?",
-    answer: "Yes, a dedicated master event coordinator and guest concierge team will be assigned to manage vendor setups, ceremony schedules, and hospitality seamlessly."
+    question: "Can I have a small, intimate wedding?",
+    answer: "Yes. Many of our destinations work well for close family weddings as well as larger celebrations."
   },
   {
-    question: "Are outside catering and decorators allowed?",
-    answer: "We offer world-class culinary options, but external specialty chefs or specific decor teams are welcome subject to prior agreement and safety approvals."
+    question: "Can my guests stay with you?",
+    answer: "Yes, We'll confirm room availability for your dates when you enquire."
+  },
+  {
+    question:"Can we customise our wedding?",
+    answer:"Yes. Share your ideas, and we'll plan around them."
+  },
+   {
+    question:"How far in advance should I book?",
+    answer:"As early as you can, especially for peak wedding months. Dates fill up fast."
+  },
+  {
+    question:"How do I get a quote?",
+    answer:"Fill in the enquiry form or call us. Packages depend on the destination, dates, and guest count.",
   }
 ];
 

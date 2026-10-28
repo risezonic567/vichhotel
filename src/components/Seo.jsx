@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { conferenceData, ourHotelsData, weddingsData } from '../data/hospitalityData';
+import { blogData } from '../data/blogData';
 import { siteConfig } from '../data/siteConfig';
 
 const ROUTE_META = {
@@ -13,7 +14,11 @@ const ROUTE_META = {
   ],
   '/weddings': ['Weddings | Vicoh Hotel', 'Explore wedding destinations listed by Vicoh Hotel.'],
   '/offers': ['Offers | Vicoh Hotel', 'View current Vicoh Hotel offers.'],
-  '/contact': ['Contact | Vicoh Hotel', 'Contact Vicoh Hotel with your enquiry.'],
+  '/blog': ['Blog | Vicoh Hotel', 'Stories, inspiration and thoughtful guides from VICOH Hotel & Resorts.'],
+  '/contact': [
+    'Contact VICOH Hotel & Resorts | Book Your Stay in India',
+    'Write or call VICOH to book a stay, wedding, or a team event in Goa, Jim Corbett, Manali, Bhimtal, Dehradun, Jaipur, or Rishikesh. A real person will reply.',
+  ],
   '/dining': ['Dining | Vicoh Hotel', 'Explore dining experiences from Vicoh Hotel.'],
   '/terms-conditions': ['Terms of Service | Vicoh Hotel', 'Read the Vicoh Hotel terms of service.'],
   '/privacy-policy': ['Privacy Policy | Vicoh Hotel', 'Read the Vicoh Hotel privacy policy.'],
@@ -36,17 +41,22 @@ export default function Seo() {
     const hotelSlug = pathname.match(/^\/our-hotels\/([^/]+)$/)?.[1];
     const conferenceSlug = pathname.match(/^\/conferences\/([^/]+)$/)?.[1];
     const weddingSlug = pathname.match(/^\/weddings\/([^/]+)$/)?.[1];
+    const blogSlug = pathname.match(/^\/blog\/([^/]+)$/)?.[1];
     const hotel = ourHotelsData.find((item) => item.slug === hotelSlug);
     const conference = conferenceData.find((item) => item.slug === conferenceSlug);
     const wedding = weddingsData.find((item) => item.slug === weddingSlug);
-    const meta = hotel
+    const blog = blogData.find((item) => item.slug === blogSlug);
+    const meta = blog
+      ? [blog.metaTitle, blog.metaDescription]
+      : hotel
       ? [`${hotel.name} | Vicoh Hotel`, hotel.shortDescription]
       : conference
         ? [`${conference.name} | Vicoh Hotel`, conference.shortDescription]
         : wedding
           ? [`${wedding.title} | Vicoh Hotel`, wedding.shortDesc]
           : ROUTE_META[pathname] || ['Page Not Found | Vicoh Hotel', 'The requested Vicoh Hotel page could not be found.'];
-    const canonical = `${siteConfig.domain}${pathname}`;
+    const canonical = blog?.canonical || `${siteConfig.domain}${pathname}`;
+    const image = blog?.thumbnail || ourHotelsData[0].heroImage;
 
     document.title = meta[0];
     ensureMeta('name', 'description', meta[1]);
@@ -54,11 +64,12 @@ export default function Seo() {
     ensureMeta('property', 'og:description', meta[1]);
     ensureMeta('property', 'og:type', 'website');
     ensureMeta('property', 'og:url', canonical);
-    ensureMeta('property', 'og:image', ourHotelsData[0].heroImage);
+    ensureMeta('name', 'keywords', blog?.metaKeywords || '');
+    ensureMeta('property', 'og:image', image);
     ensureMeta('name', 'twitter:card', 'summary_large_image');
     ensureMeta('name', 'twitter:title', meta[0]);
     ensureMeta('name', 'twitter:description', meta[1]);
-    ensureMeta('name', 'twitter:image', ourHotelsData[0].heroImage);
+    ensureMeta('name', 'twitter:image', image);
 
     let canonicalLink = document.head.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {

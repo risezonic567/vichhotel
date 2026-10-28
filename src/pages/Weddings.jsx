@@ -15,6 +15,7 @@ import FAQSection from "../components/FAQSection";
 import { WeddingFaqData } from "../data/faqData";
 import Reveal from "../components/Reveal";
 import SectionDivider from "../components/SectionDivider";
+import { siteConfig } from "../data/siteConfig";
 
 const Weddings = () => {
   return (
@@ -37,17 +38,15 @@ const Weddings = () => {
         <div className="relative z-10 text-center text-white max-w-4xl px-6">
 
           <p className="text-[#D4AF37] uppercase tracking-[0.35em] text-xs mb-5">
-            Our Properties
+            Weddings at VICOH
           </p>
 
           <h1 className="font-serif text-5xl md:text-7xl font-light mb-6">
-            A Collection of Exceptional Stays
+           Destination Weddings in Seven Amazing Locations
           </h1>
 
           <p className="text-white max-w-2xl mx-auto leading-7 text-[20px] md:text-base">
-            Discover distinctive Vicoh properties across India's most
-            inspiring destinations, where refined hospitality meets
-            unforgettable experiences.
+          Sub-line: Mountains, forest, lake, river, and beach. Find your location based on what is perfect for the two of you.
           </p>
 
         </div>
@@ -61,15 +60,13 @@ const Weddings = () => {
           </span>
 
           <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-6">
-            Celebrate Your Story
-            
-              Somewhere Extraordinary.
+           Get Married Where It Feels Like a Holiday
           </h2>
 
           <p className="text-sm md:text-base text-[#666] leading-8">
-            From intimate celebrations to grand destination weddings,
-              Vicoh Hotel creates unforgettable moments surrounded by
-              exceptional hospitality and beautiful settings.
+        A wedding doesn't have to happen in a banquet hall in your own city. Some couples want mountain air, some want the sea, and some want a quiet green corner where family can slow down for a few days.
+VICOH weddings take place across seven destinations in India. Each one has its own mood, so we start by listening to what you imagine and then suggest the place that fits your guest list, your season, and your style.
+
           </p>
         </div>
       </Reveal>
@@ -79,7 +76,7 @@ const Weddings = () => {
         <div className="max-w-7xl mx-auto">
           <SectionTitle
             subtitle="Our Wedding Destinations"
-            title="Where Beautiful Beginnings Take Place"
+            title="Seven Places. Seven Different Moods."
           />
 
           <div className="mt-16 space-y-20">
@@ -179,8 +176,8 @@ const Weddings = () => {
       <Reveal as="section" variant="bloom" className="bg-[#1C1C1C] text-white py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <SectionTitle
-            subtitle="The Vicoh Wedding Experience"
-            title="Every Detail, Thoughtfully Considered"
+            subtitle="The VICOH Wedding Experience"
+            title="The Little Things We Take Care Of"
             light
           />
 
@@ -188,23 +185,23 @@ const Weddings = () => {
             {[
               {
                 icon: Heart,
-                title: "Wedding Planning",
-                text: "Personalized planning and coordination from the first conversation to the final celebration.",
+                title: "Planning, Start to Finish",
+                text: "One team to talk to, from your first call to the last day. Tell us your ideas, and we'll help turn them into a plan.",
               },
               {
                 icon: UtensilsCrossed,
-                title: "Curated Dining",
-                text: "Thoughtfully crafted menus and memorable dining experiences for your guests.",
+                title: "Food Your Guests Will Remember",
+                text: "Menus planned around your family's tastes, your guests' preferences, and the traditions you want to keep.",
               },
               {
                 icon: Camera,
-                title: "Beautiful Moments",
-                text: "Elegant spaces and stunning surroundings designed for unforgettable memories.",
+                title: "Settings Made for Photographs",
+                text: "Mountains, forests, lakes, and beaches give you beautiful backdrops without you having to create them.",
               },
               {
                 icon: Users,
-                title: "Guest Experience",
-                text: "Comfortable stays and attentive hospitality for you and your loved ones.",
+                title: "Comfortable Guests",
+                text: "A wedding is a happy occasion for everyone. We help with stays and small details so your guests feel looked after.",
               },
             ].map((item, index) => {
               const Icon = item.icon;
@@ -236,19 +233,70 @@ const Weddings = () => {
       </Reveal>
 
       <SectionDivider variant="bloom" />
+      <Reveal as="section" variant="bloom" className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <SectionTitle title="How Planning a Wedding With Us Works" />
+
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+            {[
+              {
+                title: "Tell us about your wedding",
+                text: "Share your preferred dates, guest count, and the feel you want.",
+              },
+              {
+                title: "We suggest a destination",
+                text: "We'll tell you honestly which location suits your plans.",
+              },
+              {
+                title: "Shape the details together",
+                text: "Plan the food, stay, and small things that matter to you.",
+              },
+              {
+                title: "Enjoy your celebration",
+                text: "Our team looks after the arrangements so you can enjoy the day.",
+              },
+            ].map((step, index) => (
+              <li key={step.title} className="border-t border-[#E5DCC3] pt-6">
+                <span className="text-[#B8941F] text-xs uppercase tracking-[0.2em] font-semibold">
+                  Step {index + 1}
+                </span>
+                <h3 className="font-serif text-xl mt-4 mb-3">{step.title}</h3>
+                <p className="text-sm text-[#666] leading-7">{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </Reveal>
+
+      <SectionDivider variant="bloom" />
       <Reveal as="section" variant="bloom" className="py-24 px-6 md:px-12 text-center">
         <div className="max-w-3xl mx-auto">
           <span className="text-[#D4AF37] text-xs uppercase tracking-[0.25em] font-semibold">
-            Begin Your Celebration
+            Start Your Party
           </span>
 
           <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-6">
-            Let’s Create Something Beautiful Together
+            Let's Plan Your Wedding Together
           </h2>
 
           <p className="text-sm text-[#666] leading-7 mb-8">
-            Tell us about your celebration and our wedding specialists
-            will help you create an experience tailored to your vision.
+            Give us some details about your wedding, and we will help you choose the best destination. Rather talk? Then call us on{" "}
+            <a
+              href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+              className="text-[#1C1C1C] underline underline-offset-4 hover:text-[#B8941F]"
+            >
+              {siteConfig.phone}
+            </a>
+            {" "}or{" "}
+            <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#1C1C1C] underline underline-offset-4 hover:text-[#B8941F]"
+            >
+              WhatsApp us
+            </a>
+            .
           </p>
 
           <Link
@@ -259,10 +307,10 @@ const Weddings = () => {
             <ArrowRight size={15} />
           </Link>
         </div>
-
-        <SectionDivider variant="bloom" />
-        <FAQSection title="Wedding FAQs" data={WeddingFaqData} />
       </Reveal>
+
+      <SectionDivider variant="bloom" />
+      <FAQSection title="Wedding FAQs" data={WeddingFaqData} />
     </div>
   );
 };

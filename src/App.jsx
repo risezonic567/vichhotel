@@ -22,6 +22,8 @@ const Offers = lazy(() => import('./pages/Offers'));
 const TermsConditions = lazy(() => import('./pages/TermsConditions'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Dining = lazy(() => import('./pages/Dining'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogDetails = lazy(() => import('./pages/BlogDetails'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
@@ -74,6 +76,8 @@ export default function App() {
 
             <Route path="/contact" element={<Contact />} />
             <Route path="/dining" element={<Dining />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogDetails />} />
 
             <Route path='/terms-conditions' element={<TermsConditions/>}/>
             <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
