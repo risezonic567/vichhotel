@@ -7,6 +7,5 @@ export const siteConfig = {
   whatsapp: 'https://wa.me/9266730494',
   instagram: '',
   facebook: '',
-  // TODO: replace placeholder domain with the production canonical domain.
-  domain: 'https://example.com',
+  domain: 'https://vicohhotel.com',
 };

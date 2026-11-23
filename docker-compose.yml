@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    container_name: vichhotel_web
+    restart: always
+    ports:
+      - "127.0.0.1:6400:80"
