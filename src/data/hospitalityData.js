@@ -74,8 +74,6 @@ export const ourHotelsData = [
     slug: "sparklyn-view-manali",
     name: "Sparklyn View, Manali",
     location: "Manali, Himachal Pradesh",
-
-
     heroImage: "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580914/room6.jpg",
 
     rating: 4.8,
@@ -147,8 +145,8 @@ export const ourHotelsData = [
   {
     id: 3,
     slug: "cielorra-villas-goa",
-    name: "Cielorra Villas",
-    location: "Saligao, North Goa, India",
+    name: "Cielorra Heritage Villa",
+    location: "Anjuna, North Goa, India",
 
     heroImage:
       "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546574/44.jpg",
