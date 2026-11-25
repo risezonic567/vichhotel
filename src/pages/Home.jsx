@@ -198,11 +198,11 @@ export default function Home() {
             initial={{ scale: 1.15 }}
             animate={{ scale: 1.05 }}
             transition={{ duration: 2, ease: 'easeOut' }}
-            src="/images/Banner/Image.webp"
+            src="/images/Banner/homepagebanner.jpg.jpeg"
             alt=""
             fetchPriority="high"
             width={1920}
-            height={1080}
+            height={600}
             decoding="async"
             className="w-full h-full object-cover filter brightness-90"
           />
