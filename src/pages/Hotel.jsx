@@ -79,7 +79,7 @@ export default function Hotel() {
 
         {/* Issue #8 Fixed: Grid alignment fix on 2-column viewports */}
         <div id="properties" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 scroll-mt-24">
-          {ourHotelsData.slice(1, 5).map((hotel, index) => (
+          {ourHotelsData.map((hotel, index) => (
             <Reveal key={hotel.id} variant="arch" delay={index * 0.12} className="sm:last:col-span-2 sm:last:max-w-md sm:last:mx-auto lg:last:col-span-1 lg:last:max-w-none">
             <div
               className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"

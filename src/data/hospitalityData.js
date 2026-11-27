@@ -1,78 +1,103 @@
 // Centralized editable placeholder data for Vibe Collective Hospitality
 // TODO: client verify property/event details, contacts, prices and review claims before publishing.
+const draft = (id, slug, name, destination, location) => ({
+  id,
+  slug,
+  name,
+  destination,
+  location,
+  heroImage: "",
+  price: 0,
+  currency: "₹",
+  category: "",
+  shortDescription: "",
+  description: "",
+  rooms: "",
+  checkIn: "",
+  checkOut: "",
+  gallery: [],
+  amenities: [],
+  dining: [],
+  experiences: [],
+  phone: "+91 92667 30494",
+  email: "",
+  draft: true,
+});
+
 export const ourHotelsData = [
-  {
-    id: 1,
-    slug: "vicoh-grand-mumbai",
+  // {
+  //   id: 1,
+  //   slug: "vicoh-grand-mumbai",
 
-    name: "Vicoh Grand Mumbai",
+  //   name: "Vicoh Grand Mumbai",
 
-    location: "Mumbai, Maharashtra",
+  //   location: "Mumbai, Maharashtra",
 
-    heroImage:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+  //   heroImage:
+  //     "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
 
-    rating: 4.8,
-    reviews: 324,
-    price: 8500,
-    currency: "₹",
+  //   rating: 4.8,
+  //   reviews: 324,
+  //   price: 8500,
+  //   currency: "₹",
 
-    category: "Luxury Hotel",
+  //   category: "Luxury Hotel",
 
-    shortDescription:
-      "A sophisticated urban retreat combining contemporary luxury, refined hospitality, and exceptional city experiences.",
+  //   shortDescription:
+  //     "A sophisticated urban retreat combining contemporary luxury, refined hospitality, and exceptional city experiences.",
 
-    description:
-      "Vicoh Grand Mumbai offers an elegant stay in the heart of the city, thoughtfully designed for both business and leisure travellers. From beautifully appointed rooms to curated dining and attentive service, every element is designed around comfort and effortless luxury.",
+  //   description:
+  //     "Vicoh Grand Mumbai offers an elegant stay in the heart of the city, thoughtfully designed for both business and leisure travellers. From beautifully appointed rooms to curated dining and attentive service, every element is designed around comfort and effortless luxury.",
 
-    rooms: "185 Rooms & Suites",
+  //   rooms: "185 Rooms & Suites",
 
-    checkIn: "2:00 PM",
+  //   checkIn: "2:00 PM",
 
-    checkOut: "12:00 PM",
+  //   checkOut: "12:00 PM",
 
-    gallery: [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+  //   gallery: [
+  //     "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
 
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop",
+  //     "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop",
 
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
-    ],
+  //     "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
+  //   ],
 
-    amenities: [
-      "Luxury Rooms & Suites",
-      "Fine Dining Restaurant",
-      "Rooftop Lounge",
-      "Fitness Centre",
-      "Swimming Pool",
-      "24/7 Concierge",
-      "Business Centre",
-      "Valet Parking",
-    ],
+  //   amenities: [
+  //     "Luxury Rooms & Suites",
+  //     "Fine Dining Restaurant",
+  //     "Rooftop Lounge",
+  //     "Fitness Centre",
+  //     "Swimming Pool",
+  //     "24/7 Concierge",
+  //     "Business Centre",
+  //     "Valet Parking",
+  //   ],
 
-    dining: [
-      "All-Day Dining Restaurant",
-      "Signature Fine Dining",
-      "Rooftop Lounge",
-      "In-Room Dining",
-    ],
+  //   dining: [
+  //     "All-Day Dining Restaurant",
+  //     "Signature Fine Dining",
+  //     "Rooftop Lounge",
+  //     "In-Room Dining",
+  //   ],
 
-    experiences: [
-      "Central city location",
-      "Premium rooms and suites",
-      "Curated dining experiences",
-      "Dedicated concierge service",
-    ],
+  //   experiences: [
+  //     "Central city location",
+  //     "Premium rooms and suites",
+  //     "Curated dining experiences",
+  //     "Dedicated concierge service",
+  //   ],
 
-    phone: "+91 92667 30494",
+  //   phone: "+91 92667 30494",
 
-    email: "reservations@vicohhotel.com",
-  },
+  //   email: "reservations@vicohhotel.com",
+  // },
 
   {
     id: 2,
     slug: "sparklyn-view-manali",
     name: "Sparklyn View, Manali",
+    destination: "Manali",
     location: "Manali, Himachal Pradesh",
     heroImage: "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1790580914/room6.jpg",
 
@@ -147,6 +172,7 @@ export const ourHotelsData = [
     slug: "cielorra-villas-goa",
     name: "Cielorra Heritage Villa",
     location: "Anjuna, North Goa, India",
+    destination: "Goa",
 
     heroImage:
       "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791546574/44.jpg",
@@ -219,6 +245,7 @@ export const ourHotelsData = [
     slug: "cielorra-villas-assagao",
     name: "Cielorra Villas – Assagao",
     location: "Assagao, North Goa, India",
+    destination: "Goa",
 
     heroImage:
       "https://res.cloudinary.com/vax63czu/image/upload/f_auto,q_auto/v1791548787/3S7A0199-HDR_1.jpg.jpg",
@@ -293,209 +320,218 @@ export const ourHotelsData = [
     email: "",
   },
 
-{
-  id: 5, 
-  slug: "onyxx-nature-resort",
-  name: "Onyxx Nature Resort",
-  location: "Choii, Ramnagar, Nainital, Uttarakhand, India",
-  address: "Near Hanuman Dhaam, Choii, Ramnagar, Nainital, Uttarakhand - 244715",
+  {
+    id: 5,
+    slug: "onyxx-nature-resort",
+    name: "Onyxx Nature Resort",
+    destination: "Corbett",
+    location: "Choii, Ramnagar, Nainital, Uttarakhand, India",
+    address: "Near Hanuman Dhaam, Choii, Ramnagar, Nainital, Uttarakhand - 244715",
 
-  heroImage: "https://res.cloudinary.com/vax63czu/image/upload/v1795513464/P1099842.jpg", 
+    heroImage: "https://res.cloudinary.com/vax63czu/image/upload/v1795513464/P1099842.jpg",
 
-  price: 5500,
-  currency: "₹",
+    price: 5500,
+    currency: "₹",
 
-  category: "Nature Resort",
-  propertyType: "Hotel / Resort",
-  landArea: "6 Acres",
-  totalRooms: 54,
+    category: "Nature Resort",
+    propertyType: "Hotel / Resort",
+    landArea: "6 Acres",
+    totalRooms: 54,
 
-  shortDescription:
-    "A 6-acre nature resort in Choii, Ramnagar with 54 rooms, suites and pool villas, a multi-cuisine restaurant, conference halls and wedding lawns, close to Hanuman Dhaam.",
+    shortDescription:
+      "A 6-acre nature resort in Choii, Ramnagar with 54 rooms, suites and pool villas, a multi-cuisine restaurant, conference halls and wedding lawns, close to Hanuman Dhaam.",
 
-  description:
-    "Onyxx Nature Resort is set across 6 acres in Choii, Ramnagar, Nainital, close to Hanuman Dhaam Temple. With 54 rooms across Superior Rooms, Family Suites, Jacuzzi Suites and Pool Villas, it is designed for family holidays, weddings, events and conferences. Guests can dine at Spice Deck, the multi-cuisine restaurant, and host gatherings at the Regency Hall, Onyxx Lounge or the Royal Lawn.",
+    description:
+      "Onyxx Nature Resort is set across 6 acres in Choii, Ramnagar, Nainital, close to Hanuman Dhaam Temple. With 54 rooms across Superior Rooms, Family Suites, Jacuzzi Suites and Pool Villas, it is designed for family holidays, weddings, events and conferences. Guests can dine at Spice Deck, the multi-cuisine restaurant, and host gatherings at the Regency Hall, Onyxx Lounge or the Royal Lawn.",
 
-  rooms: "54 Rooms & Suites · 6 Acres",
-  checkIn: "2:00 PM",
-  checkOut: "10:00 AM",
+    rooms: "54 Rooms & Suites · 6 Acres",
+    checkIn: "2:00 PM",
+    checkOut: "10:00 AM",
 
-  gallery: [
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513460/P1099835.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513459/P1099828.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513460/P1099832.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513464/P1099842.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513466/P1099854.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513466/P1099856.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513456/P1099823.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513458/P1099824.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513458/P1099826.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513474/P1099926.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513473/P1099934.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513469/P1099865.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513503/P1100093.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513530/P1100236.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513502/P1100087.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513499/P1100048.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513498/P1100077.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513491/P1100038.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513490/P1100027.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513486/P1100015.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513487/P1100013.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513481/P1099944.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513475/P1099937.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513526/P1100223.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513525/P1100230.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513526/P1100234.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513524/P1100189.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513517/P1100173.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513515/P1100168.jpg",
-    "https://res.cloudinary.com/vax63czu/image/upload/v1795513510/P1100108.jpg"
-  ],
+    gallery: [
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513460/P1099835.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513459/P1099828.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513460/P1099832.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513464/P1099842.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513466/P1099854.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513466/P1099856.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513456/P1099823.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513458/P1099824.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513458/P1099826.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513474/P1099926.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513473/P1099934.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513469/P1099865.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513503/P1100093.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513530/P1100236.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513502/P1100087.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513499/P1100048.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513498/P1100077.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513491/P1100038.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513490/P1100027.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513486/P1100015.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513487/P1100013.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513481/P1099944.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513475/P1099937.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513526/P1100223.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513525/P1100230.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513526/P1100234.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513524/P1100189.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513517/P1100173.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513515/P1100168.jpg",
+      "https://res.cloudinary.com/vax63czu/image/upload/v1795513510/P1100108.jpg"
+    ],
 
-  amenities: [
-    "King Bed",
-    "Balcony / Pool View",
-    "Air Conditioning",
-    "TV",
-    "Wi-Fi",
-    "Bathroom Amenities",
-    "Gaming Zone",
-    "Conference Halls",
-  ],
+    amenities: [
+      "King Bed",
+      "Balcony / Pool View",
+      "Air Conditioning",
+      "TV",
+      "Wi-Fi",
+      "Bathroom Amenities",
+      "Gaming Zone",
+      "Conference Halls",
+    ],
 
 
-  dining: [
-    {
-      title: "Spice Deck",
-      description: "Multi-cuisine restaurant for resort guests and events.",
-    },
-    {
-      title: "Seating for 150",
-      description: "Indoor seating capacity of 150 guests, which is also the total seating capacity.",
-    },
-    {
-      title: "8:00 AM to 10:30 PM",
-      description: "Restaurant timings, open for breakfast, lunch and dinner.",
-    },
-  ],
-
-  experiences: [
-    "Close to Hanuman Dhaam Temple",
-    "Safari, Girijamata Temple, waterfalls and museum nearby",
-    "Spread across 6 acres",
-    "Weddings, events and conferences",
-  ],
-
-  phone: "+91 92667 30494", // client ne number nahi diya
-  email: "OnyxxResort@gmail.com",
-  website: "onyxx-nature-resort.sites.lobaiseo.com", // placeholder lag raha hai, page pe show nahi hota
-
-  // ---------------- Naye optional keys ----------------
-
-  // Section 2: Room category details (sheet ke hisaab se counts)
-  roomCategories: [
-    { name: "Superior Room", rooms: 29, size: "225 sq ft" },
-    { name: "Premier Family Suite", rooms: 9, size: "336 sq ft" },
-    { name: "Executive Jacuzzi / Bathtub", rooms: 6, size: "225 sq ft" },
-    { name: "Signature Family Suite with Jacuzzi", rooms: 6, size: "450 sq ft" },
-    { name: "Pool Villa", rooms: 4, size: "336 sq ft" },
-  ],
-  roomFacilities: [
-    "King Bed",
-    "Balcony / Pool View",
-    "Air Conditioning",
-    "TV",
-    "Wi-Fi",
-    "Bathroom Amenities",
-    "Gaming Zone",
-  ],
-
-  // Section 7: Tariff. "rooms" yahan tariff table wali counts hain
-  // (Premier 8, Pool Villa 5), jo section 2 se match nahi karti, client se confirm karna hai.
-  tariff: [
-    { name: "Superior Room", rooms: 29, epCp: 5500, map: 6500, ap: 7500 },
-    { name: "Premier Family Suite", rooms: 8, epCp: 6500, map: 7500, ap: 8500 },
-    { name: "Executive Jacuzzi / Bathtub", rooms: 6, epCp: 7500, map: 8500, ap: 9500 },
-    { name: "Signature Family Suite with Jacuzzi", rooms: 6, epCp: 8500, map: 9500, ap: 10500 },
-    { name: "Pool Villa", rooms: 5, epCp: 9500, map: 10500, ap: 11500 },
-  ],
-  tariffNotes: {
-    extraAdult: "35% extra on room tariff",
-    extraChild: "25% extra on room tariff",
-    gst: "5% below ₹7,500 and 18% at ₹7,500 and above",
-    seasonalTariff: "",
-    weekendTariff: "",
-    specialPackages: "",
-  },
-
-  // Section 4: Conference & banquet
-  banquet: {
-    totalHalls: 2,
-    wifi: "",
-    halls: [
+    dining: [
       {
-        name: "Regency Hall",
-        area: "6,000 sq ft",
-        theatre: "",
-        classroom: "",
-        uShape: "",
-        boardroom: "",
-        cluster: "",
+        title: "Spice Deck",
+        description: "Multi-cuisine restaurant for resort guests and events.",
       },
       {
-        name: "Onyxx Lounge",
-        area: "500 sq ft",
-        theatre: "",
-        classroom: "",
-        uShape: "",
-        boardroom: "",
-        cluster: "",
+        title: "Seating for 150",
+        description: "Indoor seating capacity of 150 guests, which is also the total seating capacity.",
+      },
+      {
+        title: "8:00 AM to 10:30 PM",
+        description: "Restaurant timings, open for breakfast, lunch and dinner.",
       },
     ],
-  },
 
-  // Section 5: Lawn & outdoor venues
-  lawns: {
-    list: [
-      { name: "Royal Lawn", area: "60,000 sq ft" },
-      { name: "Royal Courtyard Lawn", area: "20,000 sq ft" },
+    experiences: [
+      "Close to Hanuman Dhaam Temple",
+      "Safari, Girijamata Temple, waterfalls and museum nearby",
+      "Spread across 6 acres",
+      "Weddings, events and conferences",
     ],
-    eventCapacity: "",
-    otherOutdoorVenues: "",
-  },
 
-  // Section 6: Other property facilities (sheet me sab khaali the)
-  facilities: {
-    swimmingPool: "",
-    spa: "",
-    gym: "",
-    indoorGames: "",
-    outdoorGames: "",
-    parking: "",
-    travelDesk: "",
-    jungleSafariBooking: "",
-    bonfire: "",
-    conferenceFacilities: "",
-    weddingEventFacilities: "",
-    other: "",
-  },
+    phone: "+91 92667 30494", // client ne number nahi diya
+    email: "OnyxxResort@gmail.com",
+    website: "onyxx-nature-resort.sites.lobaiseo.com", // placeholder lag raha hai, page pe show nahi hota
 
-  // Section 8: Additional information
-  nearby: {
-    highlights: "Hanuman Dhaam Temple",
-    attractions: ["Hanuman Dhaam Temple"],
-    majorAttractions: ["Safari", "Girijamata Temple", "Waterfalls", "Museum"],
-    distances: {
-      airport: "78 km",
-      railwayStation: "10 km",
-      busStand: "10 km",
+    // ---------------- Naye optional keys ----------------
+
+    // Section 2: Room category details (sheet ke hisaab se counts)
+    roomCategories: [
+      { name: "Superior Room", rooms: 29, size: "225 sq ft" },
+      { name: "Premier Family Suite", rooms: 9, size: "336 sq ft" },
+      { name: "Executive Jacuzzi / Bathtub", rooms: 6, size: "225 sq ft" },
+      { name: "Signature Family Suite with Jacuzzi", rooms: 6, size: "450 sq ft" },
+      { name: "Pool Villa", rooms: 4, size: "336 sq ft" },
+    ],
+    roomFacilities: [
+      "King Bed",
+      "Balcony / Pool View",
+      "Air Conditioning",
+      "TV",
+      "Wi-Fi",
+      "Bathroom Amenities",
+      "Gaming Zone",
+    ],
+
+    // Section 7: Tariff. "rooms" yahan tariff table wali counts hain
+    // (Premier 8, Pool Villa 5), jo section 2 se match nahi karti, client se confirm karna hai.
+    tariff: [
+      { name: "Superior Room", rooms: 29, epCp: 5500, map: 6500, ap: 7500 },
+      { name: "Premier Family Suite", rooms: 8, epCp: 6500, map: 7500, ap: 8500 },
+      { name: "Executive Jacuzzi / Bathtub", rooms: 6, epCp: 7500, map: 8500, ap: 9500 },
+      { name: "Signature Family Suite with Jacuzzi", rooms: 6, epCp: 8500, map: 9500, ap: 10500 },
+      { name: "Pool Villa", rooms: 5, epCp: 9500, map: 10500, ap: 11500 },
+    ],
+    tariffNotes: {
+      extraAdult: "35% extra on room tariff",
+      extraChild: "25% extra on room tariff",
+      gst: "5% below ₹7,500 and 18% at ₹7,500 and above",
+      seasonalTariff: "",
+      weekendTariff: "",
+      specialPackages: "",
     },
+
+    // Section 4: Conference & banquet
+    banquet: {
+      totalHalls: 2,
+      wifi: "",
+      halls: [
+        {
+          name: "Regency Hall",
+          area: "6,000 sq ft",
+          theatre: "",
+          classroom: "",
+          uShape: "",
+          boardroom: "",
+          cluster: "",
+        },
+        {
+          name: "Onyxx Lounge",
+          area: "500 sq ft",
+          theatre: "",
+          classroom: "",
+          uShape: "",
+          boardroom: "",
+          cluster: "",
+        },
+      ],
+    },
+
+    // Section 5: Lawn & outdoor venues
+    lawns: {
+      list: [
+        { name: "Royal Lawn", area: "60,000 sq ft" },
+        { name: "Royal Courtyard Lawn", area: "20,000 sq ft" },
+      ],
+      eventCapacity: "",
+      otherOutdoorVenues: "",
+    },
+
+    // Section 6: Other property facilities (sheet me sab khaali the)
+    facilities: {
+      swimmingPool: "",
+      spa: "",
+      gym: "",
+      indoorGames: "",
+      outdoorGames: "",
+      parking: "",
+      travelDesk: "",
+      jungleSafariBooking: "",
+      bonfire: "",
+      conferenceFacilities: "",
+      weddingEventFacilities: "",
+      other: "",
+    },
+
+    // Section 8: Additional information
+    nearby: {
+      highlights: "Hanuman Dhaam Temple",
+      attractions: ["Hanuman Dhaam Temple"],
+      majorAttractions: ["Safari", "Girijamata Temple", "Waterfalls", "Museum"],
+      distances: {
+        airport: "78 km",
+        railwayStation: "10 km",
+        busStand: "10 km",
+      },
+    },
+
+
+    factSheet: { preparedBy: "Arjun Sharma", date: "" },
   },
 
-
-  factSheet: { preparedBy: "Arjun Sharma", date: "" },
-},
+   draft(6, "crestmont-ashapurna-jaipur", "Crestmont Ashapurna", "Jaipur", "Jaipur, Rajasthan"),
+  draft(7, "crestmont-royals-jaipur", "Crestmont Royals", "Jaipur", "Jaipur, Rajasthan"),
+  draft(8, "crestmont-admire-udaipur", "Crestmont Admire", "Udaipur", "Udaipur, Rajasthan"),
+  draft(9, "crestmont-nirvana-delhi", "Crestmont Nirvana", "Delhi", "Delhi"),
+  draft(10, "crestmont-sunshine-dehradun", "Crestmont Sunshine", "Dehradun", "Dehradun, Uttarakhand"),
+  draft(11, "crestmont-snowview-ranikhet", "Crestmont Snowview", "Ranikhet", "Ranikhet, Uttarakhand"),
+  draft(12, "cielorra-villas-calangute", "Cielorra Villas – Calangute Beach", "Goa", "Calangute Beach, North Goa, India"),
 
 
 ];
@@ -713,15 +749,15 @@ export const galleryData = [
   },
 
   {
-    url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop",
+    url: "https://res.cloudinary.com/vax63czu/image/upload/v1795513524/P1100189.jpg",
     title: "Regal Mandap Celebrations",
   },
   {
-    url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop",
+    url: "https://res.cloudinary.com/vax63czu/image/upload/v1795513525/P1100230.jpg",
     title: "Beachfront Sunset Vows",
   },
   {
-    url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop",
+    url: "https://res.cloudinary.com/vax63czu/image/upload/v1795513473/P1099934.jpg",
     title: "Royal Reception Galas",
   },
 
